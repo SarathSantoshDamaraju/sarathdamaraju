@@ -1,0 +1,28 @@
+@media only screen and (max-width:1200px) {
+    .about__container {
+        padding-top: 0px;
+        display: inline-block;
+    }
+    .about__wrapper {
+        background: none;
+    }
+    .about-left {
+        margin: 30px auto;
+    }
+    .about-right {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    body {
+        font-size: 5px;
+    }
+}

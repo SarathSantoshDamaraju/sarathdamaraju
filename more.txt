@@ -1,0 +1,5 @@
+Create the following and host them with CodePen
+[] Create different style of buttons 8-10 unique styles
+[] create a slider 
+[] shapes in svg
+[] different drop shadows

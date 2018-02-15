@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="211px" height="71px" viewBox="0 0 211 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask Copy 34</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="70.5669515 31.1741501 94.7600868 -69.6188186 140.76009 -22.61882 135.357744 111.79915 84.7600877 140.69477"></polygon>
+    </defs>
+    <g id="Template_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-622.000000, -3025.000000)">
+        <g id="Blog" transform="translate(289.000000, 2265.000000)">
+            <g id="Group-5" transform="translate(333.000000, 760.000000)">
+                <g id="Group-10">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask-Copy-34">
+                        <use xlink:href="#path-1"></use>
+                        <path stroke="#000000" stroke-width="2" d="M109.570779,69.2168097 L208.426051,45.4887761 L163.026924,1.05558373 L29.5936599,6.41835389 L1.7127871,55.2391388 L109.570779,69.2168097 Z"></path>
+                        <text x="35" y="40" font-family="verdana" font-size="20" fill="black">All Articles &#x279D;</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
