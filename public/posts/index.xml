@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Krishna Damaraju</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Krishna Damaraju</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git (Script) Aliases That Could Be Helpful</title>
+      <link>/posts/my-first-post/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/my-first-post/</guid>
+      <description>Usage of terminal is one of the best things a programmer does. It makes us feel like a little hacker playing around (at-least to me ;D ) with his cozy tool. We write little tools (when ever possible) to automate small tasks or cut the pain of typing a very long commands.
+git has the awesome feature of writing your own aliases to commands. I like it a lot and written a set of aliases that I use everyday (I call them short-codes) and I wanted to share them hoping to-be useful to others.</description>
+    </item>
+    
+  </channel>
+</rss>
