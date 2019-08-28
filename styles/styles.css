@@ -1,0 +1,86 @@
+/* Global Styles */
+@font-face {
+  font-family: 'la-sonnabula';
+  src: url('/static/fonts/la-sonnambula.ttf');
+}
+
+@font-face {
+  font-family: 'weezer';
+  src: url('/static/fonts/weezer.ttf');
+}
+
+body {
+  background-color: #1C1F24;
+  padding: 64px;
+  color: #fff;
+  font-family: 'weezer';
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+a:hover,
+a:visited {
+  color: #CB734D;
+
+}
+
+a:active {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+ul {list-style: none; padding: 0px}
+
+h2::before {
+  content: '#'
+}
+
+h4::before {
+  content: '##';
+  margin-right: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: lighter
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 52px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: lighter;
+}
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 48px;
+  }
+}
