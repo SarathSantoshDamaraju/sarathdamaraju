@@ -31,10 +31,6 @@ let Journalslist = [
   {
     name: 'Git Aliases That Could Be Helpful',
     internal: true
-  },
-  {
-    name: 'sample',
-    internal: true
   }
 ];
 
