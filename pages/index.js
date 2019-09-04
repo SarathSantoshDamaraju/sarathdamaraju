@@ -21,7 +21,7 @@ const Index = () => (
       <div className="recent-blog">
         <h4 className="page-subtitle">recent journal</h4>
         <h3>Git (script) aliases that could be helpful</h3>
-        <Link href="#"><a>read now</a></Link>
+        <a href="https://medium.com/hello-meets/data-driven-seo-for-start-ups-fa926c9040e1">read now</a>
       </div>
     </section>
 
