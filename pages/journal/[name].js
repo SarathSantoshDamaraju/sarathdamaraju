@@ -1,24 +1,24 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
-import Layout from '../../components/Layout'
-import Head from 'next/head'
+import Layout from '../../components/Layout';
+import Head from 'next/head';
 
-import Data from './git_aliases_that_could_be_helpful.mdx'
+import dynamic from 'next/dynamic';
+
 
 const Journal = () => {
-  let content;
+
   const router = useRouter();
   const { name } = router.query;
-  if (router.query.name) {
-    let content = require(`./${router.query.name}.mdx`)
-  }
+  const DynamicComponent = dynamic(() => import(`./${name}.mdx`))
+
   return (
     <Layout heading="Journal">
       <Head>
         <title>KD :: Journal</title>
       </Head>
       <div>
-        <Data />
+        <DynamicComponent />
       </div>
     </Layout>
   )
