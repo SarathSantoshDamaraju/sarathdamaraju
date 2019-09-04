@@ -3,10 +3,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import Layout from '../components/Layout';
-import '../styles/styles.css'
+
 
 const Index = () => (
-  <Layout>
+  <Layout  heading="">
     <Head>
       <title>KD :: portfolio</title>
     </Head>
@@ -19,7 +19,7 @@ const Index = () => (
       </div>
 
       <div className="recent-blog">
-        <h4>recent blog</h4>
+        <h4 className="page-subtitle">recent journal</h4>
         <h3>Git (script) aliases that could be helpful</h3>
         <Link href="#"><a>read now</a></Link>
       </div>

@@ -1,17 +1,18 @@
 import Navbar from '../Navbar';
 import Link from 'next/link';
+import '../../styles/styles.css'
 
 const Layout = props => (
   <main>
     <Navbar />
-    {props.heading ?  <h2>{props.heading}</h2> : ''}
+    {props.heading ?  <h2 className="page-title">{props.heading}</h2> : ''}
     {props.children}
     <footer>
-      made with <Link href="https://nextjs.org" target="blank"><a>nextjs</a></Link>
+      made with <Link href="#"><a>nextjs</a></Link>
     </footer>
     <style jsx>{`
     h2 {
-      margin-top: 60px;
+      margin: 60px auto 40px;
     }
     footer::before {
       content: " ";
