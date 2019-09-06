@@ -2,7 +2,7 @@ import Layout from '../../components/Layout';
 import Head from 'next/head';
 import './styles.css';
 
-const Work = () => (
+const Reading = () => (
   <Layout heading="Books read">
     <Head>
       <title>KD :: Reading</title>
@@ -40,4 +40,4 @@ const Work = () => (
   </Layout>
 );
 
-export default Work;
+export default Reading;
