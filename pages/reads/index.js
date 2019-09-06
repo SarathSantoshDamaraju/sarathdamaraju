@@ -1,11 +1,11 @@
 import Layout from '../../components/Layout';
 import Head from 'next/head';
-import './styles.css';
+// import './styles.css';
 
-const Reading = () => (
-  <Layout heading="Books read">
+const Reads = () => (
+  <Layout heading="Books reads">
     <Head>
-      <title>KD :: Reading</title>
+      <title>KD :: Reads</title>
     </Head>
 
 
@@ -36,8 +36,33 @@ const Reading = () => (
         <p>Rose George</p>
       </li>
     </ul>
+    <style jsx>{`
+    .books-read {
+      display: flex;
+      flex-direction: row;
+      max-width: 1080px;
+      flex-wrap: wrap;
+      font-size: 24px;
+      margin-top: 32px;
+    }
+    
+    .books-read li {
+      margin: 0px 40px 40px 0px;
+    }
+    
+    .book-thumbnail+a {
+      font-size: 16px;
+    }
+    
+    .book-thumbnail {
+      display: block;
+      width: 200px;
+      height: 300px;
+      border: 2px solid #CB734D;
+    }
+    `}</style>
 
   </Layout>
 );
 
-export default Reading;
+export default Reads;
