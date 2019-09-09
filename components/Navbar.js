@@ -31,6 +31,10 @@ const Navbar = () => (
         justify-content: space-between;
       }
 
+      .navLink > a{
+        font-size: 16px;
+      }
+      
       .navLinks a,
       a:hover,
       a:visited {

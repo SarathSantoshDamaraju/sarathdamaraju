@@ -16,12 +16,12 @@ const Work = () => (
     <h4 className="page-subtitle">designed</h4>
     <ul className="designed">
       <li>
-        <img src="/static/thumbnails/revealurl.png"/>
+        <img src="/static/images/thumbnails/revealurl.png"/>
         <Link href="https://revealurl.xyz"><a>RevealUrl</a></Link>
       </li>
 
       <li>
-        <img src="/static/thumbnails/portfolio.png"/>
+        <img src="/static/images/thumbnails/portfolio.png"/>
         <Link href="#"><a>My Portfolio</a></Link>
       </li>
     </ul>

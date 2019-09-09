@@ -10,7 +10,7 @@ const Journal = () => {
 
   const router = useRouter();
   const { name } = router.query;
-  const DynamicComponent = dynamic(() => import(`./${name}.mdx`))
+  const DynamicComponent = dynamic(() => import(`../../static/content/journals/${name}.mdx`))
 
   return (
     <Layout heading="Journal">

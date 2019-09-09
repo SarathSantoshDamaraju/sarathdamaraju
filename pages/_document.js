@@ -11,7 +11,10 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css" />
+          <link rel='stylesheet' type='text/css' href='/static/styles/nprogress.css' />
+          <link rel='stylesheet' type='text/css' href='/static/styles/reboot.css' />
+          <link rel='stylesheet' type='text/css' href='/static/styles/styles.css' />
+
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
         </Head>
         <body>

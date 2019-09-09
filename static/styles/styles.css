@@ -118,3 +118,57 @@ blockquote {
     font-size: 48px;
   }
 }
+
+h2 {
+  margin: 60px auto 40px;
+}
+footer::before {
+  content: " ";
+  position: absolute;
+  bottom: 8px;
+  left: -90px;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #CB734D;
+  width: 80px;
+}
+footer {
+  position: fixed;
+  right: 60px;
+  bottom: 40px;
+}
+
+/* Reads page */
+
+.books-read {
+  display: flex;
+  flex-direction: row;
+  max-width: 1080px;
+  flex-wrap: wrap;
+  font-size: 24px;
+  margin-top: 32px;
+}
+
+.books-read li {
+  margin: 0px 40px 40px 0px;
+}
+
+.book-thumbnail+a {
+  font-size: 16px;
+}
+
+.book-thumbnail {
+  display: block;
+  width: 200px;
+  height: 300px;
+  border: 2px solid #CB734D;
+}
+
+/* Contacts Page */
+a,p {
+  font-size: 20px
+}
+
+ul {
+  margin: 20px 0px;
+}
