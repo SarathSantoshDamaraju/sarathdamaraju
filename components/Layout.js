@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Navbar from './Navbar';
 import Header from './Header';
 import Footer from './Footer';
-import '../styles/styles.css'
 
 const Layout = props => (
   <main>
