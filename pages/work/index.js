@@ -9,8 +9,8 @@ const Work = () => (
     </Head>
     <h4 className="page-subtitle">developed</h4>
     <ul>
-      <li><Link href="#"><a>LazyGit</a></Link> :: cut short long git commands</li>
-      <li><Link href="#"><a>RevealURL</a></Link> :: Never open a link without knowing</li>
+      <li><Link href="https://github.com/SarathSantoshDamaraju/lazyGit"><a>LazyGit</a></Link> :: cut short long git commands</li>
+      <li><Link href="https://revealurl.xyz/"><a>RevealURL</a></Link> :: Never open a link without knowing</li>
     </ul>
 
     <h4 className="page-subtitle">designed</h4>
