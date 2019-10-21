@@ -1,5 +1,10 @@
 let Journalslist = [
   {
+    name: 'A complete <dev> guide for better buttons',
+    internal: false,
+    link: 'https://codeburst.io/a-complete-dev-guide-for-better-buttons-b2efb773a5ef'
+  },
+  {
     name: 'Well we made a tool -- RevealURL and benifited from it',
     internal: false,
     link: 'https://codeburst.io/well-i-made-a-tool-revealurl-and-i-benefited-from-it-40ad32e799ec'
