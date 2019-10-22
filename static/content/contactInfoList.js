@@ -3,6 +3,10 @@ const handlerList = [{
   link: 'https://twitter.com/krishnadamaraju'
 },
 {
+  name: 'Product Hunt',
+  link: 'https://www.producthunt.com/@sarath_damaraju'
+},
+{
   name: 'linkedin',
   link: 'https://www.linkedin.com/in/sarathdamaraju/'
 },
@@ -28,7 +32,7 @@ const handlerList = [{
 },]
 
 const contactDetails = {
-  resume: 'https://www.dropbox.com/s/ymcjaeh3bhl96wi/Krishna-Damaraju_Frontend_Resume.pdf?dl=0',
+  resume: 'https://1drv.ms/b/s!AuqiDSi5tscQgeRi5I3MQtrKhTSZBg',
   email: 'sarathdamaraju@yahoo.com',
   phone: '',
   location: 'Chennai'

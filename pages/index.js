@@ -21,7 +21,7 @@ const Index = () => (
       <div className="recent-blog">
         <h4 className="page-subtitle">recent journal</h4>
         <h3>{Journalslist[0].name}</h3>
-        <a href={Journalslist[0].link} target="_blank">read now</a>
+        <a href={Journalslist[0].link}>read now</a>
       </div>
     </section>
 
@@ -58,6 +58,14 @@ const Index = () => (
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
+      }
+      @media only screen and (max-width: 991px) {
+        .details {
+          width: 100%;
+        }
+        section {
+          height: 100vh;
+        }
       }
     `}</style>
 

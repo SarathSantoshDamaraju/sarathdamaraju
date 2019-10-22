@@ -7,21 +7,25 @@ const Work = () => (
     <Head>
       <title>KD :: Work</title>
     </Head>
-    <h4 className="page-subtitle">developed</h4>
-    <ul>
-      <li><Link href="https://github.com/SarathSantoshDamaraju/lazyGit"><a>LazyGit</a></Link> :: cut short long git commands</li>
-      <li><Link href="https://revealurl.xyz/"><a>RevealURL</a></Link> :: Never open a link without knowing</li>
-    </ul>
 
-    <h4 className="page-subtitle">designed</h4>
-    <ul className="designed">
+    <ul className="thumbnails">
       <li>
-        <img src="/static/images/thumbnails/revealurl.png"/>
+        <img src="/static/images/thumbnails/caligator.png" />
+        <Link href="https://www.producthunt.com/posts/caligator"><a>Caligator</a></Link>
+      </li>
+
+      <li>
+        <img src="/static/images/thumbnails/lazygit.png" />
         <Link href="https://revealurl.xyz"><a>RevealUrl</a></Link>
       </li>
 
       <li>
-        <img src="/static/images/thumbnails/portfolio.png"/>
+        <img src="/static/images/thumbnails/revealurl.png" />
+        <Link href="https://revealurl.xyz"><a>RevealUrl</a></Link>
+      </li>
+
+      <li>
+        <img src="/static/images/thumbnails/portfolio.png" />
         <Link href="#"><a>My Portfolio</a></Link>
       </li>
     </ul>
@@ -38,14 +42,14 @@ const Work = () => (
       text-transform: capitalize
     }
 
-    .designed {
+    .thumbnails {
       display: flex;
       flex-direction: row;
       max-width: 1080px;
       flex-wrap: wrap;
     }
 
-    .designed li {
+    .thumbnails li {
       margin: 0px 40px 40px 0px;
     }
 
@@ -56,6 +60,7 @@ const Work = () => (
     li > img {
       display: block;
       width: 280px;
+      max-height: 160px;
       border: 2px solid #CB734D;
     }
     `}</style>
