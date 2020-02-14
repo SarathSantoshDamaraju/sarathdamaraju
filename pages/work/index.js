@@ -10,18 +10,23 @@ const Work = () => (
 
     <ul className="thumbnails">
       <li>
+        <img src="/static/images/thumbnails/do-away.png" />
+        <Link href="https://github.com/SarathSantoshDamaraju/lazyGit"><a><s>DoAway</s> Sold</a></Link>
+      </li>
+
+      <li>
         <img src="/static/images/thumbnails/caligator.png" />
         <Link href="https://www.producthunt.com/posts/caligator"><a>Caligator</a></Link>
       </li>
 
       <li>
-        <img src="/static/images/thumbnails/lazygit.png" />
-        <Link href="https://revealurl.xyz"><a>RevealUrl</a></Link>
+        <img src="/static/images/thumbnails/revealurl.png" />
+        <Link href="https://revealurl.xyz"><a><s>RevealUrl</s> Sold</a></Link>
       </li>
 
       <li>
-        <img src="/static/images/thumbnails/revealurl.png" />
-        <Link href="https://revealurl.xyz"><a>RevealUrl</a></Link>
+        <img src="/static/images/thumbnails/lazygit.png" />
+        <Link href="https://github.com/SarathSantoshDamaraju/lazyGit"><a>Lazy Git</a></Link>
       </li>
 
       <li>

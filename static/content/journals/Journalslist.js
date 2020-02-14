@@ -1,7 +1,8 @@
 let Journalslist = [
   {
     name: 'Advice to younger me',
-    internal: true
+    internal: true,
+    link: './journal/advice_to_younger_me'
   },
   {
     name: 'A complete <dev> guide for better buttons',
@@ -40,7 +41,8 @@ let Journalslist = [
   },
   {
     name: 'Git Aliases That Could Be Helpful',
-    internal: true
+    internal: true,
+    link: './journal/git_aliases_that_could_be_helpful'
   }
 ];
 
