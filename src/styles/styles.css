@@ -1,12 +1,12 @@
 /* Global Styles */
 @font-face {
   font-family: 'la-sonnabula';
-  src: url('/static/fonts/la-sonnambula.ttf');
+  src: url('./fonts/la-sonnambula.ttf');
 }
 
 @font-face {
   font-family: 'weezer';
-  src: url('/static/fonts/weezer.ttf');
+  src: url('./fonts/weezer.ttf');
 }
 
 body {

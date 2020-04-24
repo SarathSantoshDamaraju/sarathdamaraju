@@ -1,0 +1,25 @@
+backend:
+  name: test-repo
+  branch: test
+media_folder: public/img
+public_folder: img
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+    - label: "Home"
+      name: "home"
+      file: "content/index.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Name", name: "name", widget: "string"}
+        - { label: "Tag", name: "tag", widget: "string"}
+        - { label: "Recent Blog", name: "recent_blog", widget: "string"}
+    - label: "Work"
+      name: "work"
+      file: "content/work.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Name", name: "name", widget: "string"}
+        - { label: "Tag", name: "tag", widget: "string"}
+        - { label: "Recent Blog", name: "recent_blog", widget: "string"}
