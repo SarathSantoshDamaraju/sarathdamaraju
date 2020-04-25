@@ -26,7 +26,7 @@ collections:
         fields:
           - label: 'Products'
             name: 'products'
-            widget: 'list'
+            widget: 'object'
             fields:
               - {
                   label: 'Name', 
