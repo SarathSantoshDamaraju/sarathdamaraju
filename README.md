@@ -1,14 +1,18 @@
-# My Portfolio Template
+# My Portfolio Website
 
+![Portfolio](https://user-images.githubusercontent.com/10527102/80273176-b7f6d700-86ed-11ea-8dc1-a19c08cb7066.png)
 
 ---
 
-## Using it
-
+## Tech details
+  - Built with *NextJs*
+  - Designed with *Adobe XD*
+  - Node req >=10.16
+  
 
 ### Layout
 
-This template comes with 5 kind of layouts
+This template comes with 5 kind of layouts. Located at `src/pages/`
 
 - `Main | Index` page : With your info and Recent blog (added automatically)
 - `Work` page : To showcase your recent work. You can use either a list or image based cards to showcasing it here
@@ -18,29 +22,36 @@ This template comes with 5 kind of layouts
 
 ### Content change
 
-Change the data in the `/static/content/` for the data to get updated in `journals`, `contact` and `reads` pages. `work` page is still WIP.
-You can follow the same structure of data or feel free to change to your needs.
+- Change the data in the `/src/content/` for the data to get updated in `journals`, `contact`, `products` and `reading` pages. 
 
-if you are planning to use `reads` page
+- Adding or removing content to use `reading` page
 
 make sure the key *thumbnail* image name is the **lowercased and underscore joined** of *name*.
 `Eg., name: Lord of the Rings, thumbnail: lord_of_the_rings`
+
 ```
-{
-  thumbnail: 'the_zahir.jpg',
-  link: 'https://www.goodreads.com/book/show/1427.The_Zahir',
-  name: 'The Zahir',
-  author: 'Paulo Coelho'
-},
+ - name: Nine Pints
+   thumbnail: nine_pints.jpg
+   link: https://www.goodreads.com/book/show/38232376-nine-pints
+   author: Rose George
 ```
 
-**Lastly,** make sure to change `defaultProps` in `components/layout`. to change the default site title.
+Add it in the `/src/content::books` section. Similar approach for `products` page.
+
+- **Images** are stored in `/public/images/*` and can be referenced as `images/*/*.[png|jpg|jpeg]`
+- **Page Title**, **heading** are loaded from content files.
 
 ### Hosting
+> This is prefered as the site is migrating towards **netlify-cms**
 
 using **netlify**
 - Set *Build command* - `npm run deploy`
 - *Publish directory* to `out` since nextjs builds the files into `out` folder.
 
-using *githubPages*
-- Bulid the file with `npm run build && npm run export` and use https://www.npmjs.com/package/gh-pages to publish. Might be helpful : https://itnext.io/next-js-app-on-github-pages-768020f2b65e
+
+### Features List
+- [x] Remove content hardcoding
+- [ ] Implement Blog with Netlify CMS
+- [ ] Implement SCSS
+- [ ] Implement Themes
+
