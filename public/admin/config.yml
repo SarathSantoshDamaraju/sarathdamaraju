@@ -1,25 +1,21 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: test
-media_folder: public/img
-public_folder: img
+media_folder: public/images
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '_'
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/index.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Name", name: "name", widget: "string"}
-        - { label: "Tag", name: "tag", widget: "string"}
-        - { label: "Recent Blog", name: "recent_blog", widget: "string"}
-    - label: "Work"
-      name: "work"
-      file: "content/work.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Name", name: "name", widget: "string"}
-        - { label: "Tag", name: "tag", widget: "string"}
-        - { label: "Recent Blog", name: "recent_blog", widget: "string"}
+      - label: 'Home'
+        name: 'index'
+        file: 'src/content/index.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'string' }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Recent Blog', name: 'recentBlog', widget: 'string' }
+          - { label: 'Recent Blog Link', name: 'recentBlogLink', widget: 'string' }
