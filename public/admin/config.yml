@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: CMS
 media_folder: public/images
 slug:
@@ -17,5 +17,37 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Intro', name: 'intro', widget: 'string' }
           - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Tag', name: 'tag', widget: 'string' }
           - { label: 'Recent Blog', name: 'recentBlog', widget: 'string' }
           - { label: 'Recent Blog Link', name: 'recentBlogLink', widget: 'string' }
+      - label: 'Products'
+        name: 'products'
+        file: 'src/content/products.md'
+        fields:
+          - label: 'Products'
+            name: 'products'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Name', 
+                  name: 'name', 
+                  widget: 'string'
+                }
+              - { 
+                  label: 'Link', 
+                  name: 'link', 
+                  widget: 'string'
+                }
+              - { 
+                  label: 'Thumbnail', 
+                  name: 'thumbnail', 
+                  widget: 'image', 
+                  config:{
+                    multiple: true
+                  }
+                }
+              - { 
+                  label: 'Link', 
+                  name: 'link', 
+                  widget: 'string'
+                }
