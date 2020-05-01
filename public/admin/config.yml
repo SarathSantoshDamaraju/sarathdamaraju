@@ -1,8 +1,7 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: staging
 media_folder: public/images
-public_folder: "src/content"
 publish_mode: editorial_workflow
 slug:
   encoding: 'ascii'
