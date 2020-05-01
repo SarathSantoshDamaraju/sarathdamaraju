@@ -23,7 +23,6 @@ collections:
       - label: 'Products'
         name: 'products'
         file: 'src/content/products.md'
-        media_folder: public/images/thumbnails
         fields:
           - label: 'Products'
             name: 'products'
