@@ -14,7 +14,7 @@ collections:
         name: 'index'
         file: 'src/content/index.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Browser - Title', name: 'title', widget: 'string' }
           - { label: 'Intro', name: 'intro', widget: 'string' }
           - { label: 'Name', name: 'name', widget: 'string' }
           - { label: 'Tag', name: 'tag', widget: 'string' }
@@ -26,7 +26,7 @@ collections:
         fields:
           - label: 'Products'
             name: 'products'
-            widget: 'object'
+            widget: 'list'
             fields:
               - {
                   label: 'Name', 

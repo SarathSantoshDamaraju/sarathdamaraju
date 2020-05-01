@@ -14,7 +14,11 @@ function Header({ title, description }) {
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
+
+Header.defaultProps = {
+  description: 'Portfolio website of krishna Sarath',
 };
 
 export default Header;
