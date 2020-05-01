@@ -1,6 +1,6 @@
 backend:
-  name: test-repo
-  branch: CMS
+  name: git-gateway
+  branch: staging
 media_folder: public/images
 slug:
   encoding: 'ascii'
