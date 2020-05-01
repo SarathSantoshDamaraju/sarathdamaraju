@@ -1,22 +1,19 @@
 ---
-title: 👨‍💻 Products
-heading: Products
 products:
-  - name: caligator
-    link: https://www.producthunt.com/posts/caligator
+  - link: 'https://www.producthunt.com/posts/caligator'
+    name: caligator
     thumbnail: caligator.png
-    status: active
-  - name: lazy-git
-    link: https://github.com/SarathSantoshDamaraju/lazyGit
+  - link: 'https://github.com/SarathSantoshDamaraju/lazyGit'
+    name: lazy-git
     thumbnail: lazygit.png
-    status: active
-  - name: do-away
-    link: https://doaway.netlify.com
+  - link: 'https://doaway.netlify.com'
+    name: do-away
     thumbnail: do-away.png
-    status: sold
-  - name: revealurl
-    link: https://revealurl.xyz
+  - link: 'https://revealurl.xyz'
+    name: revealurl
     thumbnail: revealurl.png
-    status: sold
+  - link: 'https://google.com'
+    name: Sample
+    thumbnail: /public/images/image_2020-03-19_17-17-40.png
 ---
 
