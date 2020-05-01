@@ -27,6 +27,7 @@
     "@mdx-js/loader": "^1.4.0",
     "@next/mdx": "^9.0.5",
     "@zeit/next-css": "^1.0.1",
+    "babel-eslint": "^10.1.0",
     "gray-matter": "^4.0.2",
     "next": "^9.3.0",
     "node-glob": "^1.2.0",

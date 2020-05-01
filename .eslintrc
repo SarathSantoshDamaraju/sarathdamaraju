@@ -1,5 +1,6 @@
 {
   "root": true,
+  "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -11,7 +12,9 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "template-curly-spacing" : "off",
+    "indent" : "off"
   },
   "env": {
     "browser": true,
