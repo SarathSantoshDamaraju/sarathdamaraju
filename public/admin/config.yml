@@ -2,6 +2,8 @@ backend:
   name: test-repo
   branch: staging
 media_folder: public/images
+public_folder: "src/content"
+publish_mode: editorial_workflow
 slug:
   encoding: 'ascii'
   clean_accents: true
