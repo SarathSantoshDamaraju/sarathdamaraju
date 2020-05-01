@@ -52,7 +52,7 @@ collections:
                   widget: 'string'
                 }
       - label: 'Blog'
-        name: 'Journals'
+        name: 'journals'
         folder: 'src/content/journals'
         create: true
         slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
