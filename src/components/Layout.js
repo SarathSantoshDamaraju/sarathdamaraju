@@ -6,14 +6,20 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = ({
-  title, heading, description, children,
+ title, heading, description, children,
 }) => (
   <main>
     <Header title={title || heading} description={description} />
 
     <Navbar />
 
-    {heading ? <h2 className="page-title">{heading}</h2> : ''}
+    {heading ? (
+      <h2 className="page-title">
+        {' '}
+        {heading}
+        {' '}
+      </h2>
+) : ''}
 
     {children}
 
@@ -23,9 +29,13 @@ const Layout = ({
 
 Layout.propTypes = {
   heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+};
+
+Layout.defaultProps = {
+  description: 'Portfolio website of krishna Sarath',
 };
 
 export default Layout;

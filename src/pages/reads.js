@@ -8,7 +8,7 @@ const Reads = () => (
     <ul className="books-read">
       {books.map((book) => (
         <li key={book.name}>
-          <img className="book-thumbnail" alt={book.name} src={`/images/books/${book.thumbnail}`} />
+          <img className="book-thumbnail" alt={book.name} src={`/images/${book.thumbnail}`} />
           <a href={book.link}>{book.name}</a>
           <p>{book.author}</p>
         </li>

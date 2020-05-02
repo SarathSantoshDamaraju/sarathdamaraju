@@ -1,25 +1,70 @@
 backend:
-  name: test-repo
-  branch: test
-media_folder: public/img
-public_folder: img
+  name: git-gateway
+  branch: staging
+  commit_messages:
+  create: Create {{collection}} “{{slug}}”
+  update: Update {{collection}} “{{slug}}”
+  delete: Delete {{collection}} “{{slug}}”
+  uploadMedia: Upload “{{path}}”
+  deleteMedia: Delete “{{path}}”
+media_folder: public/images
+public_folder: "/images"
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '_'
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/index.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Name", name: "name", widget: "string"}
-        - { label: "Tag", name: "tag", widget: "string"}
-        - { label: "Recent Blog", name: "recent_blog", widget: "string"}
-    - label: "Work"
-      name: "work"
-      file: "content/work.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Name", name: "name", widget: "string"}
-        - { label: "Tag", name: "tag", widget: "string"}
-        - { label: "Recent Blog", name: "recent_blog", widget: "string"}
+      - label: 'Home'
+        name: 'index'
+        file: 'src/content/index.md'
+        fields:
+          - { label: 'Browser - Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'string' }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Tag', name: 'tag', widget: 'string' }
+          - { label: 'Recent Blog', name: 'recentBlog', widget: 'string' }
+          - { label: 'Recent Blog Link', name: 'recentBlogLink', widget: 'string' }
+      - label: 'Products'
+        name: 'products'
+        file: 'src/content/products.md'
+        fields:
+          - label: 'Products'
+            name: 'products'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Name', 
+                  name: 'name', 
+                  widget: 'string'
+                }
+              - { 
+                  label: 'Link', 
+                  name: 'link', 
+                  widget: 'string'
+                }
+              - { 
+                  label: 'Thumbnail', 
+                  name: 'thumbnail', 
+                  widget: 'image', 
+                  config:{
+                    multiple: true
+                  }
+                }
+              - { 
+                  label: 'Link', 
+                  name: 'link', 
+                  widget: 'string'
+                }
+  - label: "Journals"
+    name: "journals"
+    folder: "src/content/journals"
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}

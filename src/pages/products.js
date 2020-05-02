@@ -9,7 +9,7 @@ const Work = () => (
     <ul className="thumbnails">
       {products.map((product) => (
         <li key={product.name}>
-          <img alt={product.name} src={`/images/thumbnails/${product.thumbnail}`} />
+          <img alt={product.name} src={`/images/${product.thumbnail}`} />
           <Link href="https://github.com/SarathSantoshDamaraju/lazyGit">
             <a>{product.name}</a>
           </Link>
