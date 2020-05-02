@@ -1,10 +1,11 @@
+// TODO: Fix lint
 import React, { Component } from 'react';
 import Layout from '../../components/Layout';
 
 class Post extends Component {
   static async getInitialProps({ query }) {
     const { slug } = query;
-    const blogpost = await import(`../../content/journals/${slug}.md`).catch(error => null);
+    const blogpost = await import(`../../content/journals/${slug}.md`).catch((error) => null);
 
     return { blogpost };
   }

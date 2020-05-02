@@ -6,7 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = ({
-  title, heading, description, children,
+ title, heading, description, children,
 }) => (
   <main>
     <Header title={title || heading} description={description} />
@@ -19,7 +19,7 @@ const Layout = ({
         {heading}
         {' '}
       </h2>
-    ) : ''}
+) : ''}
 
     {children}
 

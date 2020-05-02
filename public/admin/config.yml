@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: staging
+  commit_messages:
+  create: Create {{collection}} “{{slug}}”
+  update: Update {{collection}} “{{slug}}”
+  delete: Delete {{collection}} “{{slug}}”
+  uploadMedia: Upload “{{path}}”
+  deleteMedia: Delete “{{path}}”
 media_folder: public/images
 public_folder: "/images"
 slug:
@@ -55,6 +61,7 @@ collections:
   - label: "Journals"
     name: "journals"
     folder: "src/content/journals"
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}

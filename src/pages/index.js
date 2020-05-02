@@ -3,7 +3,7 @@ import { attributes } from '../content/index.md';
 import Layout from '../components/Layout';
 
 const {
-  title, intro, name, tag, recentBlog, recentBlogLink,
+ title, intro, name, tag, recentBlog, recentBlogLink,
 } = attributes;
 
 const Index = () => (

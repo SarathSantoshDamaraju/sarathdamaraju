@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { attributes } from '../../content/journals.md';
 import Layout from '../../components/Layout';
 
-const { title, heading, journals } = attributes;
+const { title, heading } = attributes;
 const importBlogPosts = async () => {
   // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
   // second flag in require.context function is if subdirectories should be searched
@@ -29,8 +30,6 @@ export default class Journals extends Component {
 
   render() {
     const { postsList } = this.props;
-
-    console.log(postsList);
     return (
 
       <Layout heading={heading} title={title}>
@@ -63,3 +62,11 @@ export default class Journals extends Component {
     );
   }
 }
+
+Journals.propTypes = {
+  postsList: PropTypes.arrayOf(PropTypes.string),
+};
+
+Journals.defaultProps = {
+  postsList: [],
+};
