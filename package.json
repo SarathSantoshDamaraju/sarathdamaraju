@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.3.0",
   "private": true,
-  "engines" : { "node" : ">=0.12" },
+  "engines" : { "node" : ">=10.16" },
   "engineStrict" : true,
   "scripts": {
     "dev": "next",
