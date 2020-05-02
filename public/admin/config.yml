@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   branch: staging
 media_folder: public/images
-publish_mode: editorial_workflow
 slug:
   encoding: 'ascii'
   clean_accents: true
@@ -52,13 +51,12 @@ collections:
                   name: 'link', 
                   widget: 'string'
                 }
-      - label: 'Blog'
-        name: 'journals'
-        folder: 'src/content/journals'
-        create: true
-        slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-          - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+  - label: "Journals"
+    name: "journals"
+    folder: "src/content/journals"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
