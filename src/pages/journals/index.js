@@ -31,7 +31,6 @@ export default class Journals extends Component {
   render() {
     const { postsList } = this.props;
     return (
-
       <Layout heading={heading} title={title}>
         <ul>
           {postsList.map((journal) => (
@@ -45,18 +44,18 @@ export default class Journals extends Component {
 
         <style jsx>
           {`
-        ul {
-          font-size: 24px;
-          margin-top: 32px;
-        }
-        li {
-          margin: 10px auto;
-          line-height: 44px;
-        }
-        a {
-          text-transform: capitalize;
-        }
-      `}
+            ul {
+              font-size: 24px;
+              margin-top: 32px;
+            }
+            li {
+              margin: 10px auto;
+              line-height: 44px;
+            }
+            a {
+              text-transform: capitalize;
+            }
+          `}
         </style>
       </Layout>
     );
