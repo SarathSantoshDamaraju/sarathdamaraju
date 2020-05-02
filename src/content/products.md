@@ -12,8 +12,5 @@ products:
   - link: 'https://revealurl.xyz'
     name: revealurl
     thumbnail: revealurl.png
-  - link: 'https://google.com'
-    name: Sample
-    thumbnail: /public/images/image_2020-03-19_17-17-40.png
 ---
 

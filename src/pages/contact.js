@@ -2,7 +2,7 @@ import { attributes } from '../content/contact.md';
 import Layout from '../components/Layout';
 
 const {
-  title, heading, socialProfiles, contactDetails, currentLocation,
+ title, heading, socialProfiles, contactDetails, currentLocation,
 } = attributes;
 
 const Index = () => (
