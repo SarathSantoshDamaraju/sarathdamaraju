@@ -1,16 +1,19 @@
 ---
+title: 💪 Products
+heading: Products
+utmParams: ['portfolio']
 products:
-  - link: 'https://www.producthunt.com/posts/caligator'
-    name: caligator
+  - name: caligator
+    link: 'https://www.producthunt.com/posts/caligator'
     thumbnail: caligator.png
-  - link: 'https://github.com/SarathSantoshDamaraju/lazyGit'
-    name: lazy-git
+  - name: lazy-git
+    link: 'https://github.com/SarathSantoshDamaraju/lazyGit'
     thumbnail: lazygit.png
-  - link: 'https://doaway.netlify.com'
-    name: do-away
+  - name: do-away
+    link: 'https://www.producthunt.com/posts/doaway-email'
     thumbnail: do-away.png
-  - link: 'https://revealurl.xyz'
-    name: revealurl
+  - name: revealurl 
+    link: 'https://www.producthunt.com/posts/revealurl'
     thumbnail: revealurl.png
 ---
 

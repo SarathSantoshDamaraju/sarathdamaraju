@@ -10,7 +10,7 @@ const Work = () => (
       {products.map((product) => (
         <li key={product.name}>
           <img alt={product.name} src={`/images/${product.thumbnail}`} />
-          <Link href="https://github.com/SarathSantoshDamaraju/lazyGit">
+          <Link href={product.link}>
             <a>{product.name}</a>
           </Link>
         </li>
