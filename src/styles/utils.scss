@@ -1,0 +1,44 @@
+.display {
+  &--flex {
+    display: flex;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--inline {
+    display: inline;
+  }
+}
+
+.justify {
+  &--centre {
+    justify-content: center;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+}
+
+.align {
+  &--centre {
+    align-content: center;
+  }
+
+  &--space-between {
+    align-content: space-between;
+    ;
+  }
+}
+
+.text {
+  &__capitalize {
+    text-transform: capitalize;
+  }
+
+  &__uppercase{
+    text-transform: uppercase;
+  }
+}

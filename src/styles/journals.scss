@@ -1,0 +1,150 @@
+.journal-item {
+  margin-bottom: 42px;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #CB734D;
+  font-size: 20px;
+  line-height: 20px;
+  display: block;
+}
+
+.description {
+font-size: 16px;
+line-height: 24px;
+}
+
+article {
+	width: 100%;
+	line-height: 2em;
+	letter-spacing: 2px;
+	div {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 1em;
+	}
+	h1 {
+		margin: 1em 0em;
+		text-align: left;
+	}
+	h2 {
+		margin: 1em 0em;
+		text-align: left;
+	}
+	h3 {
+		margin: 1em 0em;
+		text-align: left;
+	}
+	p {
+		display: block;
+		margin-bottom: 1em;
+		line-height: 1.6;
+		letter-spacing: 1.5px;
+	}
+	.highlight {
+		width: 100%;
+	}
+	pre {
+		line-height: 2rem;
+		border-radius: 3px;
+		padding: 1rem;
+		overflow-x: auto;
+		background-color: #000004;
+		width: 100%;
+		margin-bottom: 1em;
+		>code {
+			border: none;
+		}
+	}
+	code {
+		font-size: 0.9rem;
+		font-family: "Source Code Pro", monospace;
+		padding: 0.1rem;
+		border-radius: 4px;
+		border: 1px solid #cccccc;
+	}
+	img {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+		margin: 2rem auto;
+    opacity: 1;
+    border-radius: 4px;
+	}
+	blockquote {
+		background-color: #cccccc;
+		color: #39424E;
+		padding: 2rem;
+		margin: 2rem 1rem 2rem 1rem;
+		border-radius: 3px;
+		a {
+			color: #111;
+		}
+		ul {
+			margin-top: 1rem;
+		}
+		li {
+			list-style: disc;
+		}
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1rem 0;
+		overflow-x: auto;
+		th {
+			font-size: 0.9rem;
+			padding: 2px 5px;
+			text-align: center;
+			border: 1px solid #cccccc;
+		}
+		td {
+			padding: 2px 5px;
+			text-align: center;
+			border: 1px solid #cccccc;
+		}
+	}
+	li {
+		line-height: 2;
+		padding-left: 0.4rem;
+		&:last-child {
+			margin-bottom: 1rem;
+		}
+	}
+	ul {
+		list-style: disc outside;
+		padding-left: 2rem;
+	}
+	ol {
+		list-style: decimal outside;
+		padding-left: 2rem;
+	}
+	.gist {
+		max-width: 100%;
+		td {
+			text-align: left;
+			border: 0;
+		}
+		th {
+			text-align: left;
+			border: 0;
+		}
+		.gist-meta {
+			background-color: transparent;
+			color: #fff;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
