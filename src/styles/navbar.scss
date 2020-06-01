@@ -52,13 +52,10 @@ a:visited {
   text-decoration: underline;
 }
 
-// @media only screen and (max-width: 600px) {
-//   nav {
-//     flex-direction: column;
-//   }
-
-//   .navItem {
-//     width: 280px;
-//     padding: 0;
-//   }
-// }
+@media only screen and (max-width: 600px) {
+  .nav {
+    &__menu {
+      width: 160px;
+    }
+  }
+}
