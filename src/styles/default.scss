@@ -6,12 +6,15 @@
 
 @font-face {
   font-family: 'weezer';
-  src: url('./fonts/weezer.ttf');
+  src: url('./fonts/Raleway-Regular.ttf');
 }
+
 
 body {
   background-color: #1C1F24;
+  // background-color: #fff;
   padding: 64px;
+  // color: #1C1F24;
   color: #fff;
   font-family: 'weezer';
   text-transform: lowercase;
@@ -81,36 +84,36 @@ h4 {
   font-weight: lighter;
 }
 
-code,
-pre {
-  background: #292d33;
-  color: #fff;
-  page-break-inside: avoid;
-  font-family: monospace;
-  padding: 4px;
-  word-wrap: break-word;
-  border-radius: 4px;
-}
+// code,
+// pre {
+//   background: #292d33;
+//   color: #fff;
+//   page-break-inside: avoid;
+//   font-family: monospace;
+//   padding: 4px;
+//   word-wrap: break-word;
+//   border-radius: 4px;
+// }
 
-pre {
-  padding: 12px;
-}
+// pre {
+//   padding: 12px;
+// }
 
-pre > code {
-  max-width: 100%;
-  overflow-x: scroll;
-  margin: 20px auto;
-  font-size: 12px;
-  padding: 0;
-  line-height: 30px;
-}
+// pre > code {
+//   max-width: 100%;
+//   overflow-x: scroll;
+//   margin: 20px auto;
+//   font-size: 12px;
+//   padding: 0;
+//   line-height: 30px;
+// }
 
 
 
-blockquote {
-  box-shadow: inset 2px 0 0 0 #CB734D;
-  padding-left: 12px;
-}
+// blockquote {
+//   box-shadow: inset 2px 0 0 0 #CB734D;
+//   padding-left: 12px;
+// }
 
 
 @media only screen and (max-width: 600px) {
@@ -119,9 +122,6 @@ blockquote {
   }
 }
 
-h2 {
-  margin: 60px auto 40px;
-}
 footer::before {
   content: " ";
   position: absolute;
@@ -171,4 +171,13 @@ a,p {
 
 ul {
   margin: 20px 0px;
+}
+
+.theme-switcher {
+  width: 20px;
+  height: 20px;
+
+  &__polygon {
+    fill: #fff
+  }
 }

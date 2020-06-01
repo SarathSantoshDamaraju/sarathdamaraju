@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const blogPostsFolder = './src/content/journals';
 
-const withCSS = require('@zeit/next-css');
+const withSass = require('@zeit/next-sass')
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });
@@ -23,7 +23,7 @@ const getPathsForPosts = () => fs
   })
   .reduce((acc, curr) => ({ ...acc, ...curr }), {});
 
-module.exports = withCSS(withMDX());
+module.exports = withSass(withMDX());
 module.exports = {
   webpack: (configuration) => {
     configuration.module.rules.push({

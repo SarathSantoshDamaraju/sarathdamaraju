@@ -3,9 +3,7 @@ import App from 'next/app';
 import NProgress from 'nprogress';
 
 import Router from 'next/router';
-import '../styles/reboot.css';
-import '../styles/styles.css';
-import '../styles/nprogress.css';
+import '../styles/base.scss';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
