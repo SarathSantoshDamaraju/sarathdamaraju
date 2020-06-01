@@ -1,78 +1,76 @@
 import Head from 'next/head';
-import { attributes } from '../content/index.md';
+import Link from 'next/link';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
+import advancedFormat from 'dayjs/plugin/advancedFormat';
+
+import { attributes } from '../content/journals.md';
 import Layout from '../components/Layout';
 
-const {
- title, intro, name, tag, recentBlog, recentBlogLink,
-} = attributes;
+dayjs.extend(advancedFormat);
 
-const Index = () => (
-  <>
-    <Head>
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-    </Head>
-    <Layout heading="" title={title}>
-      <section>
-        <div className="details">
-          <p>{intro}</p>
-          <h1>{name}</h1>
-          <p>{tag}</p>
-        </div>
+const { title, heading } = attributes;
+const importBlogPosts = async () => {
+  // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
+  // second flag in require.context function is if subdirectories should be searched
+  const markdownFiles = require
+    .context('../content/journals', false, /\.md$/)
+    .keys()
+    .map((relativePath) => relativePath.substring(2));
+  return Promise.all(
+    markdownFiles.map(async (path) => {
+      const markdown = await import(`../content/journals/${path}`);
+      return { ...markdown, slug: path.substring(0, path.length - 3) };
+    }),
+  );
+};
 
-        <div className="recent-blog">
-          <h4 className="page-subtitle">recent journal</h4>
-          <h3>{recentBlog}</h3>
-          <a href={recentBlogLink}>read now</a>
-        </div>
-      </section>
+export default class Index extends Component {
+  static async getInitialProps() {
+    const postsList = await importBlogPosts();
 
-      {/* Local Styles */}
+    return { postsList };
+  }
 
-      <style jsx>
-        {`
-          section {
-            height: 570px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            -webkit-flex-flow: row wrap;
-          }
-          .details {
-            width: 50%;
-          }
-          .details h1 {
-            font-family: 'la-sonnabula';
-            text-decoration: underline;
-            color: #cb734d;
-            text-transform: capitalize;
-          }
-          .recent-blog {
-            width: 572px;
-            min-height: 220px;
-            border: 4px solid #cb734d;
-            padding: 24px 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden;
-          }
-          @media only screen and (max-width: 991px) {
-            .details {
-              width: 100%;
-            }
-            section {
-              height: 100vh;
-            }
-          }
-        `}
-      </style>
-    </Layout>
-  </>
-);
+  render() {
+    const { postsList } = this.props;
+    return (
+      <>
+        <Head>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+        </Head>
+        <Layout heading={heading} title={title}>
+          <ul>
+            {postsList.map((journal) => (
+              <li key={journal.name} className="journal-item">
+                <span className="date">{dayjs().format('Do, MMMM YYYY')}</span>
+                <Link href={`journals/${journal.slug}`}>
+                  <a className="title">{journal.attributes.title}</a>
+                </Link>
+                <p className="description">{journal.attributes.description}</p>
+                <Link href={`journals/${journal.slug}`}>
+                  <a className="date">Read</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-export default Index;
+          <style jsx>
+            {`
+
+          `}
+          </style>
+        </Layout>
+      </>
+    );
+  }
+}
+
+Index.propTypes = {
+  postsList: PropTypes.arrayOf(PropTypes.string),
+};
+
+Index.defaultProps = {
+  postsList: [],
+};

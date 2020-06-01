@@ -17,9 +17,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn pretty",
       "yarn lint:js",
-      "git add"
+      "yarn pretty"
     ]
   },
   "husky": {

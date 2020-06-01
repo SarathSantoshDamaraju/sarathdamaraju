@@ -1,4 +1,5 @@
 // TODO: Fix lint
+import Link from 'next/link';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,7 +8,7 @@ import Layout from '../../components/Layout';
 class Post extends Component {
   static async getInitialProps({ query }) {
     const { slug } = query;
-    const blogpost = await import(`../../content/journals/${slug}.md`).catch((error) => null);
+    const blogpost = await import(`../../content/journals/${slug}.md`).catch((error) => error);
 
     return { blogpost };
   }
@@ -24,20 +25,12 @@ class Post extends Component {
     return (
       <Layout heading={title} title={title}>
         <article>
+          <Link href="/">⬅ Back</Link>
+          <h1 className="title text--left">{blogpost.attributes.title}</h1>
           <img src={thumbnail} alt={thumbnail} />
           {/* eslint-disable-next-line */}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
-        <style jsx>
-          {`
-            article {
-              margin: 0 auto;
-            }
-            h1 {
-              text-align: center;
-            }
-          `}
-        </style>
       </Layout>
     );
   }

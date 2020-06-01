@@ -6,26 +6,19 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = ({
- title, heading, description, children,
+  title, heading, description, children,
 }) => (
-  <main>
-    <Header title={title || heading} description={description} />
+    <main>
+      <Header title={title || heading} description={description} />
+      <Navbar />
 
-    <Navbar />
+      <div className="container mt-80">
+        {children}
+      </div>
 
-    {heading ? (
-      <h2 className="page-title">
-        {' '}
-        {heading}
-        {' '}
-      </h2>
-) : ''}
-
-    {children}
-
-    <Footer />
-  </main>
-);
+      <Footer />
+    </main>
+  );
 
 Layout.propTypes = {
   heading: PropTypes.string.isRequired,

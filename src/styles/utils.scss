@@ -34,11 +34,28 @@
 }
 
 .text {
-  &__capitalize {
+  &--capitalize {
     text-transform: capitalize;
   }
 
-  &__uppercase{
+  &--uppercase{
     text-transform: uppercase;
   }
+
+  &--left{
+   text-align: left;
+  }
+
+  &--right{
+    text-align: right;
+  }
+
+  &--center{
+    text-align: center;
+  }
+}
+
+
+.mt-80 {
+  margin-top: 80px;
 }

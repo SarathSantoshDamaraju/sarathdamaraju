@@ -1,6 +1,8 @@
 ---
-title: '📞 Contact'
-heading: 'Contact'
+title: 'About'
+intro: "hi there \U0001F590️, i'm"
+name: Krishna Sarath
+tag: a js dev — with no adjectives attached. works primarily with web technologies.
 currentLocation: Chennai
 socialProfiles:
   - name: twitter
@@ -19,12 +21,7 @@ socialProfiles:
     link: https://npmjs.com/~sarathdamaraju
   - name: so
     link: https://stackoverflow.com/users/6781694/sarath-damaraju
-contactDetails:
-  - name: email
-    data: mailto:sarathdamaraju@yahoo.com
-  - name: phone
-    data: tel:8939191224
-  - name: resume
+resumeLink:
     data: https://1drv.ms/b/s!AuqiDSi5tscQgeRi5I3MQtrKhTSZBg
-    isLink: true
+    type: link
 ---

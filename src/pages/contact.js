@@ -1,34 +1,46 @@
 import { attributes } from '../content/contact.md';
 import Layout from '../components/Layout';
-
 const {
- title, heading, socialProfiles, contactDetails, currentLocation,
+  title, intro, name, tag, socialProfiles, currentLocation, resumeLink
 } = attributes;
 
-const Index = () => (
-  <Layout heading={heading} title={title}>
-    <ul>
-      {socialProfiles.map((each) => (
-        <li key={each.name}>
-          <a href={each.link}>{each.name}</a>
-        </li>
-      ))}
-    </ul>
 
-    <ul>
-      {contactDetails.map((each) => (
-        <li key={each.name}>
-          <a href={each.data}>{each.name}</a>
-        </li>
-      ))}
-    </ul>
+const Contact = () => (
+  <Layout heading="" title={title}>
+    <div className="about">
 
-    <p>
-      Current at
-      {' '}
-      <code>{currentLocation}</code>
-    </p>
-  </Layout>
+      <div className="about__intro">
+        <p>{intro}</p>
+        <h1 className="about__name">{name}</h1>
+        <p>{tag}</p>
+      </div>
+
+      <div className="about__contact">
+        <h3>👨‍💻</h3>
+        <ul>
+          {socialProfiles.map((each) => (
+            <li key={each.name}>
+              <a href={each.link}>{each.name}</a>
+            </li>
+          ))}
+        </ul>
+
+        <br />
+
+        <h3>💪</h3>
+        <ul>
+          <li>
+            <a href={resumeLink}>Resume</a>
+          </li>
+          <li>
+            <span>📍</span> <code>{currentLocation}</code>
+          </li>
+        </ul>
+        
+      </div>
+      
+    </div>
+  </Layout >
 );
 
-export default Index;
+export default Contact;

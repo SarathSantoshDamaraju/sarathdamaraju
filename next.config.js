@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const blogPostsFolder = './src/content/journals';
 
-const withSass = require('@zeit/next-sass')
+const withSass = require('@zeit/next-sass');
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });
