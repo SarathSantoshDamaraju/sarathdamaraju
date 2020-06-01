@@ -22,6 +22,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+}
+
 a,
 a:hover,
 a:visited {

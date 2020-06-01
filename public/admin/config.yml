@@ -27,8 +27,8 @@ collections:
           - { label: 'Tag', name: 'tag', widget: 'string' }
           - { label: 'Recent Blog', name: 'recentBlog', widget: 'string' }
           - { label: 'Recent Blog Link', name: 'recentBlogLink', widget: 'string' }
-      - label: 'Products'
-        name: 'products'
+      - label: 'Work'
+        name: 'work'
         file: 'src/content/products.md'
         fields:
           - label: 'Products'
@@ -62,4 +62,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

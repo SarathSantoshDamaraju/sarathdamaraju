@@ -22,7 +22,7 @@ This template comes with 5 kind of layouts. Located at `src/pages/`
 
 ### Content change
 
-- Change the data in the `/src/content/` for the data to get updated in `journals`, `contact`, `products` and `reading` pages. 
+- Change the data in the `/src/content/` for the data to get updated in `journals`, `contact`, `work` and `reading` pages. 
 
 - Adding or removing content to use `reading` page
 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const navItems = [{
   name: 'work',
-  link: '/products',
+  link: '/work',
 },
 {
   name: 'about',
@@ -24,7 +24,7 @@ const Navbar = () => (
 
       <ul className="nav__menu display--flex justify--space-between align--centre">
         {navItems.map((item) => (
-          <li className="nav__menu--item">
+          <li className="nav__menu--item" key={item.name}>
             <Link href={item.link}>
               <a>{item.name}</a>
             </Link>

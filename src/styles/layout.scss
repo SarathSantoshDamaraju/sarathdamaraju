@@ -1,11 +1,11 @@
 .container {
-  max-width: 768px;
-  margin: auto;
-
-  &--xl {
-    width: 1320px;
-  }
+  width: 320px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 
 .row {
   box-sizing: border-box;
@@ -18,5 +18,33 @@
     box-sizing: border-box;
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+
+// media queries
+
+@media (min-width: 768px) {
+  .container {
+    width: 660px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1020px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+  
+    >* {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
