@@ -1,6 +1,6 @@
 ---
 title: Advice to Younger me
-date: 2020-05-02T09:34:33.791Z
+date: '2020-05-02T09:34:33.791Z'
 thumbnail: 'df'
 description: Ever spent hours learning some technical concepts only to completely forget them later? Here’s my framework on technical learning and retention to beat our non-persistent memory 
 ---

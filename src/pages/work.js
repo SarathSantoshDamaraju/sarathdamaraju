@@ -1,6 +1,6 @@
 import { attributes } from '../content/products.md';
-import Layout from '../components/Layout';
-import Card from '../components/Card';
+import Layout from '../components/layout';
+import Card from '../components/card';
 
 const { title, heading, products } = attributes;
 

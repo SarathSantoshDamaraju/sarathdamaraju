@@ -1,6 +1,6 @@
 ---
 title: Articles being migrated to new blog
-date: 2019-10-16T09:56:27.610Z
+date: '2019-10-16T09:56:27.610Z'
 thumbnail: 'sd'
 description: ''
 ---

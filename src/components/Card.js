@@ -8,14 +8,13 @@ const Card = ({ props = {} }) => {
           <img className="card__image" alt={name} src={`/images/${thumbnail}`} />
         </div>
         <div className="card__info">
-          <h4 className="card__title">
-            {name}
-          </h4>
+          <h4 className="card__title">{name}</h4>
           <p className="card__description">{description || 'No description available'}</p>
         </div>
-      </li >)
+      </li>
+    );
   }
-  return ("")
+  return '';
 };
 
 export default Card;
