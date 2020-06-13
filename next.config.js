@@ -1,29 +1,7 @@
-const fs = require('fs');
-
-const blogPostsFolder = './src/content/journals';
-
-const withSass = require('@zeit/next-sass')
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-});
-
-
-const getPathsForPosts = () => fs
-  .readdirSync(blogPostsFolder)
-  .map((blogName) => {
-    const trimmedName = blogName.substring(0, blogName.length - 3);
-    return {
-      [`/journals/${trimmedName}`]: {
-        page: '/journals/[slug]',
-        query: {
-          slug: trimmedName,
-        },
-      },
-    };
-  })
-  .reduce((acc, curr) => ({ ...acc, ...curr }), {});
-
-module.exports = withSass(withMDX());
+/**
+ * To get the YAML Front Matter like title, heading.. from the [pageName].md
+ * TODO: can this be replaced with grey-matter
+ */
 module.exports = {
   webpack: (configuration) => {
     configuration.module.rules.push({
@@ -35,7 +13,6 @@ module.exports = {
   async exportPathMap(defaultPathMap) {
     return {
       ...defaultPathMap,
-      ...getPathsForPosts(),
     };
   },
 };

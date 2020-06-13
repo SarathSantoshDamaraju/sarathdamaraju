@@ -1,5 +1,5 @@
 import { attributes } from '../content/reading.md';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 
 const { title, heading, books } = attributes;
 

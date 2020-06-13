@@ -5,10 +5,18 @@
 @import './default.scss';
 @import './layout.scss';
 
+// Utils
+@import './utils.scss';
+
+// Components
+@import './navbar.scss';
+@import './card.scss';
+
 // Pages
 @import './journals.scss';
-@import './navbar.scss';
-@import './products.scss';
+@import './work.scss';
+@import './contact.scss';
+
 
 // 3rd party
 @import './nprogress.scss';

@@ -14,8 +14,6 @@
   font-weight: bold;
   margin-bottom: 16px;
   color: #CB734D;
-  font-size: 20px;
-  line-height: 20px;
   display: block;
 }
 
@@ -82,11 +80,15 @@ article {
     border-radius: 4px;
 	}
 	blockquote {
-		background-color: #cccccc;
-		color: #39424E;
-		padding: 2rem;
-		margin: 2rem 1rem 2rem 1rem;
-		border-radius: 3px;
+    color: #fff;
+    padding: 2rem;
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 3px;
+    border-left: 2px solid #CB734D;
+    background: transparent;
+    text-transform: inherit;
+    font-style: italic;
+
 		a {
 			color: #111;
 		}

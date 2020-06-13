@@ -1,34 +1,52 @@
 import { attributes } from '../content/contact.md';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 
-const {
- title, heading, socialProfiles, contactDetails, currentLocation,
-} = attributes;
+const { title, intro, heading, name, tag, socialProfiles, currentLocation, resumeLink } = attributes;
 
-const Index = () => (
+const Contact = () => (
   <Layout heading={heading} title={title}>
-    <ul>
-      {socialProfiles.map((each) => (
-        <li key={each.name}>
-          <a href={each.link}>{each.name}</a>
-        </li>
-      ))}
-    </ul>
+    <div className="about">
+      <div className="about__intro">
+        <p>{intro}</p>
+        <h1 className="about__name">{name}</h1>
+        <p>{tag}</p>
+      </div>
 
-    <ul>
-      {contactDetails.map((each) => (
-        <li key={each.name}>
-          <a href={each.data}>{each.name}</a>
-        </li>
-      ))}
-    </ul>
+      <div className="about__contact">
+        <h3>
+          <span role="img" aria-label="details">
+            👨‍💻
+          </span>
+        </h3>
+        <ul>
+          {socialProfiles.map((each) => (
+            <li key={each.name}>
+              <a href={each.link}>{each.name}</a>
+            </li>
+          ))}
+        </ul>
 
-    <p>
-      Current at
-      {' '}
-      <code>{currentLocation}</code>
-    </p>
+        <br />
+
+        <h3>
+          <span role="img" aria-label="contact">
+            ☎️
+          </span>
+        </h3>
+        <ul>
+          <li>
+            <a href={resumeLink}>Resume</a>
+          </li>
+          <li>
+            <span role="img" aria-label="location">
+              📍
+            </span>{' '}
+            <code>{currentLocation}</code>
+          </li>
+        </ul>
+      </div>
+    </div>
   </Layout>
 );
 
-export default Index;
+export default Contact;

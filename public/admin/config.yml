@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master
   commit_messages:
     create: Create {{collection}} “{{slug}}”
@@ -17,18 +17,43 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - label: 'Home'
-        name: 'index'
-        file: 'src/content/index.md'
+      - label: 'Contact'
+        name: 'contact'
+        file: 'src/content/contact.md'
         fields:
-          - { label: 'Browser - Title', name: 'title', widget: 'string' }
-          - { label: 'Intro', name: 'intro', widget: 'string' }
-          - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Tag', name: 'tag', widget: 'string' }
-          - { label: 'Recent Blog', name: 'recentBlog', widget: 'string' }
-          - { label: 'Recent Blog Link', name: 'recentBlogLink', widget: 'string' }
-      - label: 'Products'
-        name: 'products'
+          - label: 'Browser - Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Intro'
+            name: 'intro' 
+            widget: 'string'
+          - label: 'Name'
+            name: 'name' 
+            widget: 'string'
+          - label: 'Tag'
+            name: 'tag' 
+            widget: 'string'
+          - label: 'Recent Blog'
+            name: 'recentBlog' 
+            widget: 'string'
+          - label: 'Recent Blog Link'
+            name: 'recentBlogLink' 
+            widget: 'string'
+          - label: 'Social Profiles'
+            name: 'socialProfiles'
+            widget: 'list'
+            fields:
+              - label: "Name"
+                name: 'name'
+                widget: 'string'
+              - label: "Link"
+                name: 'link'
+                widget: 'string'
+          - label: 'Resume Link'
+            name: 'resumeLink'
+            widget: 'string'
+      - label: 'Work'
+        name: 'work'
         file: 'src/content/products.md'
         fields:
           - label: 'Products'
@@ -56,10 +81,11 @@ collections:
   - label: "Journals"
     name: "journals"
     folder: "src/content/journals"
-    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    slug: "{{title}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -10,6 +10,11 @@
 }
 
 
+* {
+  transition: .2s cubic-bezier(.42,0,.58,1);
+}
+
+
 body {
   background-color: #1C1F24;
   // background-color: #fff;
@@ -17,9 +22,15 @@ body {
   // color: #1C1F24;
   color: #fff;
   font-family: 'weezer';
-  text-transform: lowercase;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
 }
 
 a,
