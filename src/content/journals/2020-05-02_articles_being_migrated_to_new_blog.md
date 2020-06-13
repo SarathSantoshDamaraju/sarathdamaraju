@@ -1,9 +1,10 @@
 ---
 title: Articles being migrated to new blog
 date: 2019-10-16T09:56:27.610Z
-thumbnail: ''
+thumbnail: 'sd'
 description: ''
 ---
+
 Hey there 👋,   
 Thanks for checking out my blog. It just rewritten to be used with **Netlify CMS** and my blogs are being migrated from various places. Meanwhile you can still read the articles from the below links.
  

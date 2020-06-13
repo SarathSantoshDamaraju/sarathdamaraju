@@ -1,12 +1,12 @@
 import { attributes } from '../content/contact.md';
 import Layout from '../components/Layout';
 const {
-  title, intro, name, tag, socialProfiles, currentLocation, resumeLink
+  title, intro, heading, name, tag, socialProfiles, currentLocation, resumeLink
 } = attributes;
 
 
 const Contact = () => (
-  <Layout heading="" title={title}>
+  <Layout heading={heading} title={title}>
     <div className="about">
 
       <div className="about__intro">

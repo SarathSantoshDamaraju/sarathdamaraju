@@ -1,6 +1,7 @@
 ---
 title: 'About'
 intro: "hi there \U0001F590️, i'm"
+heading: 'About'
 name: Krishna Sarath
 tag: a js dev — with no adjectives attached. works primarily with web technologies.
 currentLocation: Chennai

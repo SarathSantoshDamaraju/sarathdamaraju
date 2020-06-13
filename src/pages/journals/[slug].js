@@ -8,9 +8,12 @@ import Layout from '../../components/Layout';
 class Post extends Component {
   static async getInitialProps({ query }) {
     const { slug } = query;
-    const blogpost = await import(`../../content/journals/${slug}.md`).catch((error) => error);
 
-    return { blogpost };
+    if (slug && query) {
+      const blogpost = await import(`../../content/journals/${slug}.md`).catch((error) => console.log(error));
+
+      return { blogpost };
+    }
   }
 
   render() {
@@ -19,15 +22,14 @@ class Post extends Component {
 
     const {
       html,
-      attributes: { thumbnail, title },
+      attributes: { title="title"},
     } = blogpost;
 
     return (
       <Layout heading={title} title={title}>
         <article>
           <Link href="/">⬅ Back</Link>
-          <h1 className="title text--left">{blogpost.attributes.title}</h1>
-          <img src={thumbnail} alt={thumbnail} />
+          <h1 className="title text--left">{title}</h1>
           {/* eslint-disable-next-line */}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>

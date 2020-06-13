@@ -12,12 +12,15 @@ const Layout = ({
       <Header title={title || heading} description={description} />
       <Navbar />
 
+
+
       <div className="container mt-80">
+        <h2 className="page-title mb-20">{heading}</h2>
         {children}
       </div>
 
       <Footer />
-    </main>
+    </main >
   );
 
 Layout.propTypes = {
