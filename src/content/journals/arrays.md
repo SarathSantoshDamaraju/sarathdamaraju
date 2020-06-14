@@ -3,6 +3,7 @@ title: JS Array Iterators Cheat Sheet — Part 1
 description: Cheatsheet part-1 for javascript iterators forEach, map, filter and some.
 tags: javascript, webdev, beginners, tutorial
 date: '2020-04-21'
+thumbnail: ''
 ---
 
 Hey! I'm starting this new series aimed at helping beginners understand some key javascript concepts. I know that digesting all the info and being able to implement everything in the first go can be difficult for beginners, so I'll try and include a decision diagram at the end of each post. I hope it helps! Let's get started.

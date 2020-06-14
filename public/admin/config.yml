@@ -2,11 +2,11 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: Create {{collection}} “{{slug}}”
-    update: Update {{collection}} “{{slug}}”
-    delete: Delete {{collection}} “{{slug}}”
-    uploadMedia: Upload “{{path}}”
-    deleteMedia: Delete “{{path}}”
+    create: ✨ Added new {{collection}} “{{slug}}”
+    update: ✍🏻 Update {{collection}} “{{slug}}”
+    delete: 🗑 Delete {{collection}} “{{slug}}”
+    uploadMedia: 🖼 Upload “{{path}}”
+    deleteMedia: 🗑 Delete “{{path}}”
 media_folder: public/images
 public_folder: "/images"
 slug:
@@ -62,7 +62,7 @@ collections:
             fields:
               - {
                   label: 'Name', 
-                  name: 'name', 
+                  name: 'title', 
                   widget: 'string'
                 }
               - { 
@@ -87,5 +87,17 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Tags", name: "tAGS", widget: "list", default: [""]}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Bits"
+    name: "bits"
+    folder: "src/content/bits"
+    slug: "{{title}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "string"}
+      - {label: "Tags", name: "tAGS", widget: "list", default: [""]}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
