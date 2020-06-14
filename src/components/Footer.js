@@ -1,9 +1,8 @@
 import Link from 'next/link';
 
 const Footer = () => (
-  <footer>
-    made with
-    {' '}
+  <footer className="position--fixed">
+    made with{' '}
     <Link href="#">
       <a>nextjs</a>
     </Link>

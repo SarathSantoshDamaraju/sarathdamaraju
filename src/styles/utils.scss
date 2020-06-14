@@ -1,0 +1,88 @@
+// overflow
+
+.overflow {
+  &--hidden {
+    overflow: hidden;
+  }
+
+  &--scroll {
+    overflow: scroll;
+  }
+}
+
+// position
+
+.position {
+  &--fixed {
+    position: fixed;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--relative {
+    position: relative;
+  }
+}
+
+// display
+
+.display {
+  &--flex {
+    display: flex;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--inline {
+    display: inline;
+  }
+}
+
+// text alignments
+
+.justify {
+  &--centre {
+    justify-content: center;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+}
+
+.align {
+  &--centre {
+    align-content: center;
+  }
+
+  &--space-between {
+    align-content: space-between;
+    ;
+  }
+}
+
+.text {
+  &--capitalize {
+    text-transform: capitalize;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

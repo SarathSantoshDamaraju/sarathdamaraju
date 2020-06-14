@@ -2,8 +2,10 @@
   "name": "portfolio",
   "version": "0.3.0",
   "private": true,
-  "engines" : { "node" : ">=10.16" },
-  "engineStrict" : true,
+  "engines": {
+    "node": ">=10.16"
+  },
+  "engineStrict": true,
   "scripts": {
     "dev": "next",
     "start": "next start",
@@ -15,9 +17,9 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn pretty",
       "yarn lint:js",
-      "git add"
+      "yarn pretty",
+      "git add ."
     ]
   },
   "husky": {
@@ -26,20 +28,20 @@
     }
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.4.0",
-    "@next/mdx": "^9.0.5",
-    "@zeit/next-css": "^1.0.1",
     "babel-eslint": "^10.1.0",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.8.28",
     "gray-matter": "^4.0.2",
     "next": "^9.3.0",
-    "node-glob": "^1.2.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "raw-loader": "^4.0.1",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-markdown": "^4.3.1",
-    "styled-components": "^4.3.2"
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.2",
+    "sass": "^1.26.8"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

@@ -1,0 +1,47 @@
+// Resets
+@use './reboot.scss';
+
+// Base 
+@import './variables.scss';
+
+// Utils
+@import './utils.scss';
+@import './typography.scss';
+
+// Components
+@import './components/components.scss';
+
+// Pages
+@import './pages/pages.scss';
+
+
+// 3rd party
+@import './nprogress.scss';
+
+// Overrides 
+
+main {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $dark;
+  color: $light;
+  font-size: $font-size-base;
+  font-family: raleway-regular;
+  line-height: $line-height-base;
+
+  transition: .2s cubic-bezier(.42, 0, .58, 1);
+
+  height:100%;
+  margin-top: -80px;
+
+  &.light {
+    background-color: $light;
+    color: $dark;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+}

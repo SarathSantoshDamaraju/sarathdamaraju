@@ -1,0 +1,15 @@
+footer {
+  right: 60px;
+  bottom: 40px;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    bottom: 8px;
+    left: -90px;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $primary;
+    width: 80px;
+  }
+}

@@ -1,54 +1,47 @@
-// TODO: Fix lint
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../../components/Layout';
+import { getAllJournalNames, getJournalData } from '../../lib/journals';
 
-class Post extends Component {
-  static async getInitialProps({ query }) {
-    const { slug } = query;
-    const blogpost = await import(`../../content/journals/${slug}.md`).catch((error) => null);
+export async function getStaticPaths() {
+  const paths = getAllJournalNames();
+  return {
+    paths,
+    fallback: true,
+  };
+}
 
-    return { blogpost };
-  }
+export async function getStaticProps({ params }) {
+  const journalData = await getJournalData(params.slug);
+  return {
+    props: {
+      journalData,
+    },
+  };
+}
 
-  render() {
-    const { blogpost } = this.props;
-    if (!blogpost) return <div>not found</div>;
-
-    const {
-      html,
-      attributes: { thumbnail, title },
-    } = blogpost;
-
+const Journal = function Post({ journalData }) {
+  if (journalData) {
     return (
-      <Layout heading={title} title={title}>
+      <Layout heading="" title={journalData.title}>
         <article>
-          <img src={thumbnail} alt={thumbnail} />
+          <h1 className="title text--left">{journalData.title}</h1>
           {/* eslint-disable-next-line */}
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div dangerouslySetInnerHTML={{ __html: journalData.contentHtml }} />
         </article>
-        <style jsx>
-          {`
-            article {
-              margin: 0 auto;
-            }
-            h1 {
-              text-align: center;
-            }
-          `}
-        </style>
       </Layout>
     );
   }
-}
 
-Post.propTypes = {
-  blogpost: PropTypes.arrayOf(PropTypes.string),
+  return <div>Not found</div>;
 };
 
-Post.defaultProps = {
-  blogpost: [],
+Journal.propTypes = {
+  journalData: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
-export default Post;
+Journal.defaultProps = {
+  journalData: {},
+};
+
+export default Journal;

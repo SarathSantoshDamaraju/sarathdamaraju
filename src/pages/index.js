@@ -1,78 +1,62 @@
+import React from 'react';
+
 import Head from 'next/head';
-import { attributes } from '../content/index.md';
+import Link from 'next/link';
+
+import PropTypes from 'prop-types';
+
+import dayjs from 'dayjs';
+import advancedFormat from 'dayjs/plugin/advancedFormat';
+
 import Layout from '../components/Layout';
+import { attributes } from '../content/journals.md';
+import { getJournalsList } from '../lib/journals';
 
-const {
- title, intro, name, tag, recentBlog, recentBlogLink,
-} = attributes;
+const { title: pageTitle, heading } = attributes;
 
-const Index = () => (
-  <>
-    <Head>
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-    </Head>
-    <Layout heading="" title={title}>
-      <section>
-        <div className="details">
-          <p>{intro}</p>
-          <h1>{name}</h1>
-          <p>{tag}</p>
-        </div>
+dayjs.extend(advancedFormat);
 
-        <div className="recent-blog">
-          <h4 className="page-subtitle">recent journal</h4>
-          <h3>{recentBlog}</h3>
-          <a href={recentBlogLink}>read now</a>
-        </div>
-      </section>
+export async function getStaticProps() {
+  const journalsList = getJournalsList();
+  return {
+    props: {
+      journalsList,
+    },
+  };
+}
 
-      {/* Local Styles */}
+const Index = function Index({ journalsList }) {
+  return (
+    <>
+      <Head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+      </Head>
+      <Layout heading={heading} title={pageTitle}>
+        <ul>
+          {journalsList.map(({ journalName, title, description, date }) => (
+            <li key={title} className="journal-item">
+              <span className="date">{dayjs(date).format('Do, MMMM YYYY')}</span>
+              <Link href={`journals/${journalName}`}>
+                <a className="title">{title}</a>
+              </Link>
+              <p className="description">{description}</p>
+              <Link href={`journals/${journalName}`}>
+                <a className="date">Read</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Layout>
+    </>
+  );
+};
 
-      <style jsx>
-        {`
-          section {
-            height: 570px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            -webkit-flex-flow: row wrap;
-          }
-          .details {
-            width: 50%;
-          }
-          .details h1 {
-            font-family: 'la-sonnabula';
-            text-decoration: underline;
-            color: #cb734d;
-            text-transform: capitalize;
-          }
-          .recent-blog {
-            width: 572px;
-            min-height: 220px;
-            border: 4px solid #cb734d;
-            padding: 24px 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden;
-          }
-          @media only screen and (max-width: 991px) {
-            .details {
-              width: 100%;
-            }
-            section {
-              height: 100vh;
-            }
-          }
-        `}
-      </style>
-    </Layout>
-  </>
-);
+Index.propTypes = {
+  journalsList: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+};
+
+Index.defaultProps = {
+  journalsList: {},
+};
 
 export default Index;
