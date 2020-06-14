@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import { getAllJournalNames, getJournalData } from '../../lib/journals';
 
 export async function getStaticPaths() {

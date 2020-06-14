@@ -1,16 +1,15 @@
 .card {
   height: 256px;
   width: 270px;
-  margin: 12px;
+  margin: $spacing-base * 3;
   text-align: left;
-  background-color: #CB734D;
-  border-radius: 4px;
-  padding: 2px;
-  overflow: hidden;
+  background-color: $primary;
+  border-radius: $spacing-base;
+  padding: $spacing-base;
   transition: ease 0.15s;
 
   &:hover {
-    padding: 4px;
+    padding: $spacing-base;
   }
 
   &__image-container {

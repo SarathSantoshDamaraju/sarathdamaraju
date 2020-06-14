@@ -39,7 +39,7 @@
 }
 
 .navItem a,
-a:hover {
+.navItem a:hover {
   color: #fff;
 }
 
@@ -49,6 +49,11 @@ a:hover {
 
 .navItem a:hover {
   text-decoration: underline;
+}
+
+.theme-switcher {
+  width: 20px;
+  height: 20px;
 }
 
 @media only screen and (max-width: 600px) {

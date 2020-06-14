@@ -3,7 +3,7 @@ const Card = ({ props = {} }) => {
 
   if (Object.keys(props).length) {
     return (
-      <li key={name} className="card">
+      <li key={name} className="card overflow--hidden">
         <div className="card__image-container">
           <img className="card__image" alt={name} src={`/images/${thumbnail}`} />
         </div>
