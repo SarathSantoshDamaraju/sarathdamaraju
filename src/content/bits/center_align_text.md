@@ -5,6 +5,8 @@ tAGS:
   - css
 description: Vertically and Horizontally centre align Text to the Whole Page
 ---
+To align text content **Vertically** and **Horizontally** in the centre with css.
+
 ```
 /*
 <body>
