@@ -1,5 +1,5 @@
 import { attributes } from '../content/contact.md';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const { title, intro, heading, name, tag, socialProfiles, currentLocation, resumeLink } = attributes;
 

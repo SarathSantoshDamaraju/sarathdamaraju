@@ -6,11 +6,11 @@ import Router from 'next/router';
 import '../styles/base.scss';
 
 export default class MyApp extends App {
-  static async getStaticProps({ Component, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getStaticProps(ctx);
+      pageProps = await Component.getInitialProps(ctx);
     }
 
     return { pageProps };

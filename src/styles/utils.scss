@@ -1,3 +1,33 @@
+// overflow
+
+.overflow {
+  &--hidden {
+    overflow: hidden;
+  }
+
+  &--scroll {
+    overflow: scroll;
+  }
+}
+
+// position
+
+.position {
+  &--fixed {
+    position: fixed;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--relative {
+    position: relative;
+  }
+}
+
+// display
+
 .display {
   &--flex {
     display: flex;
@@ -11,6 +41,8 @@
     display: inline;
   }
 }
+
+// text alignments
 
 .justify {
   &--centre {
@@ -38,28 +70,19 @@
     text-transform: capitalize;
   }
 
-  &--uppercase{
+  &--uppercase {
     text-transform: uppercase;
   }
 
-  &--left{
-   text-align: left;
+  &--left {
+    text-align: left;
   }
 
-  &--right{
+  &--right {
     text-align: right;
   }
 
-  &--center{
+  &--center {
     text-align: center;
   }
-}
-
-
-.mt-80 {
-  margin-top: 80px;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
 }

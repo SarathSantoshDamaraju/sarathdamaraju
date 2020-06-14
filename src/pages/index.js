@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { attributes } from '../content/journals.md';
 import { getJournalsList } from '../lib/journals';
 
