@@ -63,7 +63,7 @@ const Navbar = ({ themeSwitcher }) => {
 };
 
 Navbar.propTypes = {
-  themeSwitcher: PropTypes.string.isRequired,
+  themeSwitcher: PropTypes.func.isRequired,
 };
 
 export default Navbar;
