@@ -15,7 +15,7 @@ const Contact = () => (
       <div className="about__contact">
         <h3>
           <span role="img" aria-label="details">
-            👨‍💻
+            🌏
           </span>
         </h3>
         <ul>
@@ -30,7 +30,7 @@ const Contact = () => (
 
         <h3>
           <span role="img" aria-label="contact">
-            ☎️
+            ✨
           </span>
         </h3>
         <ul>
