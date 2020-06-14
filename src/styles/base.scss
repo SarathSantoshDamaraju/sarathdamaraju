@@ -28,11 +28,16 @@ main {
   font-size: $font-size-base;
   font-family: raleway-regular;
   line-height: $line-height-base;
-
   transition: .2s cubic-bezier(.42, 0, .58, 1);
-
   height:100%;
-  margin-top: -80px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:0;
+  top: 0px;
+  overflow: scroll;
 
   &.light {
     background-color: $light;
