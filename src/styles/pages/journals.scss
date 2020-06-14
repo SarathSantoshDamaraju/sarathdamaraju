@@ -13,7 +13,7 @@
 .title {
   font-weight: bold;
   margin-bottom: 16px;
-  color: #CB734D;
+  color: $primary;
   display: block;
 }
 
@@ -31,33 +31,23 @@ article {
 		height: 100%;
 		margin-bottom: 1em;
 	}
-	h1 {
-		margin: 1em 0em;
-		text-align: left;
-	}
-	h2 {
-		margin: 1em 0em;
-		text-align: left;
-	}
-	h3 {
+	h1, h2, h3, h4, h5 {
 		margin: 1em 0em;
 		text-align: left;
 	}
 	p {
 		display: block;
 		margin-bottom: 1em;
-		line-height: 1.6;
 		letter-spacing: 1.5px;
 	}
 	.highlight {
 		width: 100%;
 	}
 	pre {
-		line-height: 2rem;
 		border-radius: 3px;
 		padding: 1rem;
 		overflow-x: auto;
-		background-color: #000004;
+		background-color: $primary;
 		width: 100%;
 		margin-bottom: 1em;
 		>code {
@@ -73,25 +63,21 @@ article {
 	}
 	img {
 		width: 100%;
-		max-width: 100%;
+		max-width: 600px;
 		display: block;
 		margin: 2rem auto;
     opacity: 1;
-    border-radius: 4px;
+		border-radius: 4px;
+		border: 2px solid $primary;
 	}
 	blockquote {
-    color: #fff;
-    padding: 2rem;
-    margin: 2rem 1rem 2rem 1rem;
-    border-radius: 3px;
-    border-left: 2px solid #CB734D;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 2px solid $primary;
     background: transparent;
     text-transform: inherit;
     font-style: italic;
 
-		a {
-			color: #111;
-		}
 		ul {
 			margin-top: 1rem;
 		}
@@ -148,5 +134,15 @@ article {
 				color: #fff;
 			}
 		}
+	}
+
+	hr {
+		display: block;
+		border: 0;
+		height: 0.25rem;
+		margin: 4rem auto;
+		width: 300px;
+		background-size: 100% 26px;
+		background-color: $primary;
 	}
 }
