@@ -1,8 +1,9 @@
 ---
 title: Advice to Younger Devs (/me)
 date: '2020-05-02T09:34:33.791Z'
-thumbnail: 'df'
+thumbnail: ''
 description: Advice I'd give to any junior dev
+tags: advice, developer
 ---
 
 By the time of writing this article, I had experience of 4 years as a developer. I have made mistakes, had struggles and learned a lot of things in these 4 years. I am penned down crucial of those learnings, expecting they would be of help to someone.

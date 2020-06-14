@@ -27,11 +27,11 @@ function LayoutContent({ title, heading, description, children }) {
   }, [theme, setTheme]);
 
   return (
-    <main className={`${theme === 'light' ? 'light' : 'dark'}`}>
+    <main className={`fade-in ${theme === 'light' ? 'light' : 'dark'}`}>
       <Header title={title || heading} description={description} />
       <Navbar themeSwitcher={useTheme} />
 
-      <div className="container mt-80">
+      <div className="container">
         {heading ? <h2 className="page-title mb-20">{heading}</h2> : ''}
         {children}
       </div>
@@ -45,7 +45,7 @@ LayoutContent.propTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 const Layout = ({ title, heading, description, children }) => (

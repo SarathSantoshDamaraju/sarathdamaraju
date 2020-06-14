@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 const navItems = [
   {
+    name: 'bits',
+    link: '/bits',
+  },
+  {
     name: 'work',
     link: '/work',
   },

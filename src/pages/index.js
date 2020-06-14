@@ -1,23 +1,20 @@
 import React from 'react';
-
 import Head from 'next/head';
 import Link from 'next/link';
-
 import PropTypes from 'prop-types';
-
 import dayjs from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 
 import Layout from '../components/Layout';
 import { attributes } from '../content/journals.md';
-import { getJournalsList } from '../lib/journals';
-
-const { title: pageTitle, heading } = attributes;
+import { getSortedFilesList } from '../lib/journals';
 
 dayjs.extend(advancedFormat);
 
+const { title: pageTitle, heading } = attributes;
+
 export async function getStaticProps() {
-  const journalsList = getJournalsList();
+  const journalsList = getSortedFilesList();
   return {
     props: {
       journalsList,
@@ -33,14 +30,14 @@ const Index = function Index({ journalsList }) {
       </Head>
       <Layout heading={heading} title={pageTitle}>
         <ul>
-          {journalsList.map(({ journalName, title, description, date }) => (
+          {journalsList.map(({ fileName, title, description, date }) => (
             <li key={title} className="journal-item">
               <span className="date">{dayjs(date).format('Do, MMMM YYYY')}</span>
-              <Link href={`journals/${journalName}`}>
+              <Link href={`journals/${fileName}`}>
                 <a className="title">{title}</a>
               </Link>
               <p className="description">{description}</p>
-              <Link href={`journals/${journalName}`}>
+              <Link href={`journals/${fileName}`}>
                 <a className="date">Read</a>
               </Link>
             </li>
@@ -52,7 +49,7 @@ const Index = function Index({ journalsList }) {
 };
 
 Index.propTypes = {
-  journalsList: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  journalsList: PropTypes.array, // eslint-disable-line react/forbid-prop-types
 };
 
 Index.defaultProps = {

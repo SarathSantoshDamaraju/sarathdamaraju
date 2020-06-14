@@ -3,6 +3,7 @@ title: Older blog posts
 date: '2019-10-16T09:56:27.610Z'
 thumbnail: 'sd'
 description: ''
+tags: ''
 ---
 
 Hey there 👋,   

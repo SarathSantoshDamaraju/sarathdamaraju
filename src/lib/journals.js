@@ -5,23 +5,26 @@ import remark from 'remark';
 import html from 'remark-html';
 import dayjs from 'dayjs';
 
-const journalsFolder = path.join(process.cwd(), 'src/content/journals');
+const listFolders = {
+  journals: path.join(process.cwd(), 'src/content/journals'),
+  bits: path.join(process.cwd(), 'src/content/bits'),
+};
 
 /**
  * Get the SORTED list of all files in the repo
  */
 
 // TODO: rewrite this to be accommodated with the below functions
-export function getJournalsList() {
-  const fileNames = fs.readdirSync(journalsFolder);
+export function getSortedFilesList(listFor = 'journals') {
+  const fileNames = fs.readdirSync(listFolders[listFor]);
 
-  const allJournals = fileNames.map((fileName) => {
-    const journalName = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(journalsFolder, fileName);
+  const allJournals = fileNames.map((eachFileName) => {
+    const fileName = eachFileName.replace(/\.md$/, '');
+    const fullPath = path.join(listFolders[listFor], eachFileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
     return {
-      journalName,
+      fileName,
       ...matterResult.data,
     };
   });
@@ -35,8 +38,8 @@ export function getJournalsList() {
   });
 }
 
-export function getAllJournalNames() {
-  const fileNames = fs.readdirSync(journalsFolder);
+export function getFilesList(listFor = 'journals') {
+  const fileNames = fs.readdirSync(listFolders[listFor]);
 
   return fileNames.map((fileName) => ({
     params: {
@@ -45,8 +48,8 @@ export function getAllJournalNames() {
   }));
 }
 
-export async function getJournalData(slug) {
-  const fullPath = path.join(journalsFolder, `${slug}.md`);
+export async function getFileData(slug, listFor = 'journals') {
+  const fullPath = path.join(listFolders[listFor], `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   const processedContent = await remark().use(html).process(matterResult.content);
