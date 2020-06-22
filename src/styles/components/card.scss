@@ -1,6 +1,6 @@
 .card {
   height: auto;
-  width: 270px;
+  max-width: 270px;
   margin: $spacing-base * 3;
   text-align: left;
   background-color: $primary;
@@ -31,7 +31,7 @@
     padding: 20px 20px 0px;
     height: 124px;
     background: #fff;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 4px;
   }
 
   &__description {
@@ -43,7 +43,7 @@
   &__title {
     font-size: 16px;
     font-weight: bold;
-    color: #CB734D;
+    color: $primary;
   }
 }
 

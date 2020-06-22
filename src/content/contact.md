@@ -22,7 +22,5 @@ socialProfiles:
     link: https://npmjs.com/~sarathdamaraju
   - name: so
     link: https://stackoverflow.com/users/6781694/sarath-damaraju
-resumeLink:
-    data: https://1drv.ms/b/s!AuqiDSi5tscQgeRi5I3MQtrKhTSZBg
-    type: link
+resumeLink: https://1drv.ms/b/s!AuqiDSi5tscQgeRi5I3MQtrKhTSZBg
 ---

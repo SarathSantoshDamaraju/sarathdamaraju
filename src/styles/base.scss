@@ -39,10 +39,14 @@ body, main {
   padding:0;
   top: 0px;
   overflow: scroll;
-
+  
   &.light {
     background-color: $light;
     color: $dark;
+
+    #logo__text {
+      fill: $primary;
+    }
   }
 }
 

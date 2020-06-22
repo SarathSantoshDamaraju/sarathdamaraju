@@ -8,7 +8,7 @@ const Work = () => (
   <Layout heading={heading} title={title}>
     <ul className="products">
       {products.map((product) => (
-        <a href={product.link} target="_blank" rel="noopener noreferrer" key={product.name}>
+        <a href={product.link} key={product.name} className="margin--auto" target="_blank" rel="noopener noreferrer">
           <Card props={product} />
         </a>
       ))}

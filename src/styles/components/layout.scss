@@ -1,5 +1,5 @@
 .container {
-  width: 320px;
+  max-width: 680px;
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;
@@ -12,20 +12,6 @@
 
   &:before {
     content: '#';
-  }
-}
-
-// media queries
-
-@media (min-width: 768px) {
-  .container {
-    width: 660px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    width: 1020px;
   }
 }
 

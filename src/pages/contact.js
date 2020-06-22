@@ -13,37 +13,39 @@ const Contact = () => (
       </div>
 
       <div className="about__contact">
-        <h3>
-          <span role="img" aria-label="details">
-            🌏
-          </span>
-        </h3>
-        <ul>
-          {socialProfiles.map((each) => (
-            <li key={each.name}>
-              <a href={each.link}>{each.name}</a>
+        <div className="">
+          <h3>
+            <span role="img" aria-label="details">
+              🌏
+            </span>
+          </h3>
+          <ul>
+            {socialProfiles.map((each) => (
+              <li key={each.name}>
+                <a href={each.link}>{each.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3>
+            <span role="img" aria-label="contact">
+              ✨
+            </span>
+          </h3>
+          <ul>
+            <li>
+              <a href={resumeLink}>Resume</a>
             </li>
-          ))}
-        </ul>
-
-        <br />
-
-        <h3>
-          <span role="img" aria-label="contact">
-            ✨
-          </span>
-        </h3>
-        <ul>
-          <li>
-            <a href={resumeLink}>Resume</a>
-          </li>
-          <li>
-            <span role="img" aria-label="location">
-              📍
-            </span>{' '}
-            <code>{currentLocation}</code>
-          </li>
-        </ul>
+            <li>
+              <span role="img" aria-label="location">
+                📍
+              </span>{' '}
+              <code>{currentLocation}</code>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </Layout>

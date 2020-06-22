@@ -34,7 +34,9 @@ const Index = function Index({ journalsList }) {
             <li key={title} className="journal-item">
               <span className="date">{dayjs(date).format('Do, MMMM YYYY')}</span>
               <Link href={`journals/${fileName}`}>
-                <a className="title">{title}</a>
+                <a>
+                  <h4 className="title">{title}</h4>
+                </a>
               </Link>
               <p className="description">{description}</p>
               <Link href={`journals/${fileName}`}>

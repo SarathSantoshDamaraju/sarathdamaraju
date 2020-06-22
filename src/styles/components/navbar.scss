@@ -8,7 +8,7 @@
   overflow: visible;
   display: flex;
   align-items: center;
-  padding: 40px;
+  padding: 20px 40px;
 
   &__element {
     justify-content: space-between;
@@ -16,6 +16,7 @@
 
   &__menu {
     width: 180px;
+    margin: 0px;
 
     &--item,
     &--item>* {
@@ -58,6 +59,8 @@
 
 @media only screen and (max-width: 600px) {
   .nav {
+    background: inherit;
+
     &__menu {
       width: 160px;
     }
