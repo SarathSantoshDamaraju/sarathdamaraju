@@ -20,7 +20,7 @@ const Bits = ({ codeBitsList }) => (
   <Layout heading={heading} title={title} description={description}>
     <ul className="products">
       {codeBitsList.map((codeBit) => (
-        <a key={codeBit.fileName} href={`bits/${codeBit.fileName}`}>
+        <a className="margin--auto" key={codeBit.fileName} href={`bits/${codeBit.fileName}`}>
           <Card props={codeBit} />
         </a>
       ))}

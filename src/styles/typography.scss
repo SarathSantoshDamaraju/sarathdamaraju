@@ -8,6 +8,16 @@
   src: url('./fonts/Raleway-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'raleway-bold';
+  src: url('./fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'raleway-medium';
+  src: url('./fonts/Raleway-Medium.ttf');
+}
+
 // Headings
 h1,
 h2,
@@ -20,6 +30,7 @@ h5,
 .h4,
 .h5 {
   line-height: $line-height-base;
+  font-family: 'raleway-medium'
 }
 
 h1,
