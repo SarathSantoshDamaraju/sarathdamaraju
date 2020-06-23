@@ -51,7 +51,8 @@ using **netlify**
 
 ### Features List
 - [x] Remove content hardcoding
-- [ ] Implement Blog with Netlify CMS
-- [ ] Implement SCSS
+- [x] Implement Blog with Netlify CMS
+- [x] Implement SCSS
+- [ ] Lint SCSS and refactor SCSS
 - [ ] Implement Themes
 

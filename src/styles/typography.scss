@@ -24,11 +24,13 @@ h2,
 h3,
 h4,
 h5,
+h6,
 .h1,
 .h2,
 .h3,
 .h4,
-.h5 {
+.h5,
+.h6 {
   line-height: $line-height-base;
   font-family: 'raleway-medium'
 }
@@ -58,6 +60,11 @@ h5,
   font-size: $h5-font-size;
 }
 
+h6,
+.h6 {
+  font-size: $font-size-small;
+}
+
 // Text
 
 p {
@@ -72,7 +79,6 @@ a,
 a:hover,
 a:visited {
   color: $primary;
-
 }
 
 a:hover {
