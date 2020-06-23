@@ -91,9 +91,16 @@
   }
 }
 
-
+// margin
 .margin {
   &--auto {
     margin: auto;
+  }
+}
+
+// Opacity
+.opacity {
+  &--6 {
+    opacity: 0.6;
   }
 }

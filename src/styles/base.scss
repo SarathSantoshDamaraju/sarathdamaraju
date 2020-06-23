@@ -20,7 +20,6 @@
 
 // Overrides 
 
-
 main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,6 +47,15 @@ main {
       fill: $primary;
     }
   }
+
+  // Experimental
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    }
 }
 
 @media (max-width: 480px) {

@@ -1,6 +1,6 @@
 ---
 title: A complete <dev> guide for better buttons
-date: '2019-18-16T09:56:27.610Z'
+date: '2019-12-16'
 description: Better approach to make buttons for all.
 tags: buttons, guide, accessibility, best-practices
 thumbnail: ''
