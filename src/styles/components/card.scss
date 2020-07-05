@@ -45,5 +45,11 @@
     font-weight: bold;
     color: $primary;
   }
+
+  iframe {
+    height: 300px;
+    border: none;
+    width: 240px;
+  }
 }
 

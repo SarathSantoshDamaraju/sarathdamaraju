@@ -78,6 +78,21 @@ collections:
                     multiple: true
                   }
                 }
+      - label: 'Notes'
+        name: 'notes'
+        file: 'src/content/notes.md'
+        widget: 'list'
+        fields:
+          - {
+              label: 'Name', 
+              name: 'name', 
+              widget: 'string'
+            }
+          - { 
+              label: 'url', 
+              name: 'url', 
+              widget: 'string'
+            }
   - label: "Journals"
     name: "journals"
     folder: "src/content/journals"
