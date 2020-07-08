@@ -1,23 +1,16 @@
 ---
-title: 💪 Work
-heading: Work
-utmParams: ['portfolio']
 products:
-  - title: caligator
-    link: 'https://www.producthunt.com/posts/caligator'
+  - link: 'http://bit.ly/2T6nbdD'
     thumbnail: caligator.png
-    description: 'An open-source calculator & convertor that thinks like you'
-  - title: lazy-git
-    link: 'https://github.com/SarathSantoshDamaraju/lazyGit'
+    title: caligator
+  - link: 'https://bit.ly/3iJb1TR'
     thumbnail: lazygit.png
-    description: 'Cut-short long git commands'
-  - title: do-away
-    link: 'https://www.producthunt.com/posts/doaway-email'
+    title: lazy-git
+  - link: 'http://bit.ly/3a0Ggoy'
     thumbnail: do-away.png
-    description: 'Disposable emails simplified.'
-  - title: revealurl 
-    link: 'https://www.producthunt.com/posts/revealurl'
+    title: do-away
+  - link: 'http://bit.ly/2T3Q5em'
     thumbnail: revealurl.png
-    description: 'No more clicking unknown short-URLs'
+    title: revealurl
 ---
 
