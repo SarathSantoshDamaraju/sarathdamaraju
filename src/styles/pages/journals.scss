@@ -7,13 +7,13 @@
   font-weight: bold;
   display: inline-block;
   padding: 4px 8px;
-  background-color: $primary;
-  color: $light;
+  background-color: $foreground-color;
+  color: $white;
   border-radius: 4px;
 
   &:hover,
   &:visited {
-    color: $light;
+    color: $white;
   }
 }
 
@@ -48,6 +48,7 @@ article {
   h5 {
     margin: 1em 0em;
     text-align: left;
+    color: $foreground-color;
   }
 
   p {
@@ -79,7 +80,7 @@ article {
     padding: 0.1rem;
     border-radius: 4px;
     border: 1px solid #cccccc;
-    color: $primary;
+    color: $foreground-color;
   }
 
   img {
@@ -89,13 +90,13 @@ article {
     margin: 2rem auto;
     opacity: 1;
     border-radius: 4px;
-    border: 2px solid $primary;
+    border: 2px solid $foreground-color;
   }
 
   blockquote {
     padding: 1rem;
     margin: 1rem;
-    border-left: 2px solid $primary;
+    border-left: 2px solid $foreground-color;
     background: transparent;
     text-transform: inherit;
     font-style: italic;
@@ -178,6 +179,6 @@ article {
     margin: 4rem auto;
     width: 300px;
     background-size: 100% 26px;
-    background-color: $primary;
+    background-color: $foreground-color;
   }
 }

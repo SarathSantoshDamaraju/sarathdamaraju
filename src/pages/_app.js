@@ -1,8 +1,8 @@
 import React from 'react';
 import App from 'next/app';
 import NProgress from 'nprogress';
-
 import Router from 'next/router';
+
 import '../styles/base.scss';
 
 export default class MyApp extends App {

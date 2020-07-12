@@ -45,16 +45,24 @@
 }
 
 .navElement>a:active {
-  color: #cb734d;
+  color: $foreground-color;
 }
 
 .navItem a:hover {
   text-decoration: underline;
 }
 
-.theme-switcher {
+#theme-switcher {
   width: 20px;
   height: 20px;
+
+  &--foreground-color {
+    fill: $foreground-color;
+  }
+
+  &--background-color {
+    fill: $background-color;
+  }
 }
 
 @media only screen and (max-width: 600px) {

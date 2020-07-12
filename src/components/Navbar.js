@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
+
+import { themeList, setTheme } from '../lib/themes';
 
 const navItems = [
   {
@@ -16,12 +17,25 @@ const navItems = [
   },
 ];
 
-const Navbar = ({ themeSwitcher }) => {
-  const [theme, setTheme] = themeSwitcher();
-  const isLight = theme === 'light';
-
+const Navbar = () => {
   function handleKeyPress() {
-    setTheme(window.localStorage.setItem('theme', isLight ? 'dark' : 'light'));
+    let theme = {};
+    const currentTheme = window.localStorage.getItem('portfolio-theme');
+    let currentThemeId = 1;
+
+    if (currentTheme) {
+      currentThemeId = JSON.parse(currentTheme).id;
+
+      if (currentThemeId === themeList.length) {
+        currentThemeId = 1;
+      } else {
+        currentThemeId += 1;
+      }
+    }
+
+    theme = themeList.find((eachTheme) => eachTheme.id === currentThemeId);
+    window.localStorage.setItem('portfolio-theme', JSON.stringify(theme));
+    setTheme(theme);
   }
 
   return (
@@ -58,14 +72,28 @@ const Navbar = ({ themeSwitcher }) => {
               role="button"
               tabIndex="0"
               className="nav__menu--item"
-              onClick={() => setTheme(window.localStorage.setItem('theme', isLight ? 'dark' : 'light'))}
+              onClick={handleKeyPress}
               onKeyPress={handleKeyPress}
             >
-              <svg className="theme-switcher" viewBox="0 0 21.939 19">
-                <path
-                  fill={isLight ? '#111' : '#fff'}
-                  d="M 15.29978275299072 0 C 16.01431465148926 0 16.67456817626953 0.3811978697776794 17.03183364868164 1.000000238418579 L 21.36196136474609 8.5 C 21.71922492980957 9.118802070617676 21.71922492980957 9.881197929382324 21.36196136474609 10.5 L 17.03183364868164 18 C 16.67456817626953 18.61880111694336 16.01431465148926 19 15.29978275299072 19 L 6.639527797698975 19 C 5.924996376037598 19 5.264742374420166 18.61880111694336 4.907476902008057 18 L 0.5773502588272095 10.49999904632568 C 0.2200846523046494 9.881196975708008 0.2200847566127777 9.118801116943359 0.5773505568504333 8.499999046325684 L 4.907478809356689 0.9999995827674866 C 5.264744281768799 0.3811976313591003 5.92499828338623 0 6.639529228210449 0 Z"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <g id="theme-switcher" data-name="Group 2" transform="translate(-1400 -31)">
+                  <path
+                    id="theme-switcher--foreground-color"
+                    data-name="Polygon 3"
+                    d="M9.293.707a1,1,0,0,1,1.414,0l8.586,8.586a1,1,0,0,1,0,1.414l-8.586,8.586a1,1,0,0,1-1.414,0L.707,10.707a1,1,0,0,1,0-1.414Z"
+                    transform="translate(1400 31)"
+                    fill="#2b9aad"
+                  />
+                  <circle
+                    id="theme-switcher--background-color"
+                    data-name="Ellipse 1"
+                    cx="3"
+                    cy="3"
+                    r="3"
+                    transform="translate(1407 38)"
+                    fill="#ecdfbc"
+                  />
+                </g>
               </svg>
             </a>
           </li>
@@ -73,10 +101,6 @@ const Navbar = ({ themeSwitcher }) => {
       </div>
     </nav>
   );
-};
-
-Navbar.propTypes = {
-  themeSwitcher: PropTypes.func.isRequired,
 };
 
 export default Navbar;
