@@ -24,6 +24,6 @@ socialProfiles:
     name: npm
   - link: 'http://bit.ly/2oM9XEd'
     name: SO
-resumeLink: 'https://1drv.ms/b/s!AuqiDSi5tscQgeRi5I3MQtrKhTSZBg'
+resumeLink: 'https://1drv.ms/b/s!AuqiDSi5tscQgex23gHsF5cFmADOtA?e=Z6dati'
 ---
 
