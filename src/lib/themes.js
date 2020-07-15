@@ -34,6 +34,13 @@ export const themeList = [
     background_color: '#314455',
     font_color: '#fff',
   },
+  {
+    id: 6,
+    name: 'blues',
+    foreground_color: '#090B45',
+    background_color: '#F8FAFE',
+    font_color: '#000',
+  },
 ];
 
 export const setTheme = (theme) => {

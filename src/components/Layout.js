@@ -1,48 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { createGlobalStyle } from 'styled-components';
 
 import Navbar from './Navbar';
 import Header from './Header';
 import Footer from './Footer';
 
-import { setTheme } from '../lib/themes';
-
-function LayoutContent({ title, heading, description, children }) {
-  React.useEffect(() => {
-    // if theme is set, load it
-    const currentTheme = window.localStorage.getItem('portfolio-theme');
-
-    if (currentTheme) {
-      setTheme(JSON.parse(currentTheme));
-    }
-  }, []);
-
-  return (
-    <main className="grand fade-in">
-      <Header title={title || heading} description={description} />
-      <Navbar />
-
-      <div className="container">
-        {heading ? <h2 className="page-title mb-20">{heading}</h2> : ''}
-        {children}
-      </div>
-
-      <Footer className="position--fixed" />
-    </main>
-  );
-}
-
-LayoutContent.propTypes = {
-  title: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --foreground-color:  ${(props) => props.theme.foreground_color};
+    --background-color: ${(props) => props.theme.background_color}; 
+    --text-color: ${(props) => props.theme.font_color};
+  }
+`;
 const Layout = ({ title, heading, description, children }) => (
-  <LayoutContent title={title} heading={heading} description={description}>
-    {children}
-  </LayoutContent>
+  <main>
+    <GlobalStyle />
+    <Header title={title || heading} description={description} />
+    <Navbar />
+
+    <div className="container">
+      {heading ? <h2 className="page-title mb-20">{heading}</h2> : ''}
+      {children}
+    </div>
+
+    <Footer className="position--fixed" />
+  </main>
 );
 
 Layout.propTypes = {
