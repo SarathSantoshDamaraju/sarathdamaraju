@@ -1,6 +1,6 @@
 ---
 title: Factory Functions in JS
-date: 21/06/2020
+date: '2020-06-21'
 tAGS:
   - factory
   - javascript

@@ -1,7 +1,7 @@
 ---
-title: Object oriented -vs- Functional Programming
+title: OOP -vs- FP
 date: 21/06/2020
-tAGS:
+tags:
   - javascript
   - oop
   - functional-programming

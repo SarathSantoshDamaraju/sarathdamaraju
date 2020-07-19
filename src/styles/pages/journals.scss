@@ -2,14 +2,19 @@
   margin-bottom: 42px;
 }
 
+.title {
+  display: inline-block;
+}
+
 .read {
   font-size: 12px;
   font-weight: bold;
   display: inline-block;
-  padding: 4px 8px;
-  background-color: $primary;
+  padding: 2px 8px;
+  border: 1px dashed $light;
   color: $light;
   border-radius: 4px;
+  text-transform: lowercase;
 
   &:hover,
   &:visited {
@@ -28,6 +33,7 @@
 .description {
   font-size: 16px;
   line-height: 16px;
+  opacity: 0.9;
 }
 
 article {
@@ -69,6 +75,7 @@ article {
     margin-bottom: 1em;
 
     >code {
+      color: $dark;
       border: none;
     }
   }
@@ -79,7 +86,7 @@ article {
     padding: 0.1rem;
     border-radius: 4px;
     border: 1px solid #cccccc;
-    color: $primary;
+    color: $light;
   }
 
   img {
@@ -89,13 +96,13 @@ article {
     margin: 2rem auto;
     opacity: 1;
     border-radius: 4px;
-    border: 2px solid $primary;
+    border: 2px solid $light;
   }
 
   blockquote {
     padding: 1rem;
     margin: 1rem;
-    border-left: 2px solid $primary;
+    border-left: 2px solid $light;
     background: transparent;
     text-transform: inherit;
     font-style: italic;
@@ -163,10 +170,10 @@ article {
 
     .gist-meta {
       background-color: transparent;
-      color: #fff;
+      color: $light;
 
       a {
-        color: #fff;
+        color: $light;
       }
     }
   }
@@ -178,6 +185,26 @@ article {
     margin: 4rem auto;
     width: 300px;
     background-size: 100% 26px;
-    background-color: $primary;
+    background-color: $light;
+  }
+}
+
+.light {
+  article {
+    blockquote {
+      border-left: 2px solid $dark;
+    }
+
+    hr {
+      background-color: $dark;
+    }
+
+    code {
+      color: $dark;
+    }
+
+    img {
+      border: 2px solid $dark;
+    }
   }
 }

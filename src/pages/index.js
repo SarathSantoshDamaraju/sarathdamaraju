@@ -30,7 +30,9 @@ const Index = function Index({ journalsList }) {
       </Head>
       <Layout heading={heading} title={pageTitle}>
         <ul>
-          {journalsList.map(({ fileName, title, description, date }) => (
+          {journalsList.map(({
+            fileName, title, description, date,
+          }) => (
             <li key={title} className="journal-item">
               <h6 className="opacity--6">{dayjs(date).format('Do, MMMM YYYY')}</h6>
               <Link href={`journals/${fileName}`}>
@@ -43,7 +45,7 @@ const Index = function Index({ journalsList }) {
                 <a className="read text--capitalize">Read</a>
               </Link>
             </li>
-          ))}
+            ))}
         </ul>
       </Layout>
     </>

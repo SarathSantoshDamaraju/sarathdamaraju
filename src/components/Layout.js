@@ -19,7 +19,9 @@ ThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-function LayoutContent({ title, heading, description, children }) {
+function LayoutContent({
+  title, heading, description, children,
+}) {
   const [theme, setTheme] = useTheme();
 
   React.useEffect(() => {
@@ -48,13 +50,15 @@ LayoutContent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const Layout = ({ title, heading, description, children }) => (
+const Layout = ({
+  title, heading, description, children,
+}) => (
   <ThemeProvider theme="light">
     <LayoutContent title={title} heading={heading} description={description}>
       {children}
     </LayoutContent>
   </ThemeProvider>
-);
+  );
 
 Layout.propTypes = {
   heading: PropTypes.string.isRequired,

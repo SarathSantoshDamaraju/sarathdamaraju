@@ -1,7 +1,9 @@
 import { attributes } from '../content/contact.md';
 import Layout from '../components/Layout';
 
-const { title, intro, heading, name, tag, socialProfiles, currentLocation, resumeLink } = attributes;
+const {
+  title, intro, heading, name, tag, socialProfiles, resumeLink,
+} = attributes;
 
 const Contact = () => (
   <Layout heading={heading} title={title}>
@@ -37,12 +39,6 @@ const Contact = () => (
           <ul>
             <li>
               <a href={resumeLink}>Resume</a>
-            </li>
-            <li>
-              <span role="img" aria-label="location">
-                📍
-              </span>{' '}
-              <code>{currentLocation}</code>
             </li>
           </ul>
         </div>

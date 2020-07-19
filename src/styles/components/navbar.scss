@@ -41,11 +41,7 @@
 
 .navItem a,
 .navItem a:hover {
-  color: #fff;
-}
-
-.navElement>a:active {
-  color: #cb734d;
+  color: $light;
 }
 
 .navItem a:hover {
