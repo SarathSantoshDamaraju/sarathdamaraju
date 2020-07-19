@@ -1,6 +1,6 @@
 ---
-title: Difference between == and ===
-date: 19/07/2020
+title: == vs ===
+date: '2020-07-19'
 tAGS:
   - javascript
   - js-strict

@@ -103,7 +103,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Tags", name: "tAGS", widget: "list", default: [""]}
+      - {label: "Tags", name: "tags", widget: "list", default: [""]}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Bits"
     name: "bits"

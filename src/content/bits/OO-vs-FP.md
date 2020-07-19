@@ -1,7 +1,7 @@
 ---
-title: Object oriented -vs- Functional Programming
+title: OOP -vs- FP
 date: 21/06/2020
-tAGS:
+tags:
   - javascript
   - oop
   - functional-programming
@@ -35,4 +35,4 @@ Small light reusable functions which accepts a range of parameters and returns a
 OOP: `React.Component` is an Object.
 FP: `setState({})` Method is an example for FP.
 
-#### TIP: Dont try to [learn](https://www.youtube.com/watch?v=m3svKOdZijA) OOP and FP from Underscore.js
+> TIP: Dont try to [learn](https://www.youtube.com/watch?v=m3svKOdZijA) OOP and FP from Underscore.js
