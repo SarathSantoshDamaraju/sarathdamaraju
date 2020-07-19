@@ -35,4 +35,4 @@ Small light reusable functions which accepts a range of parameters and returns a
 OOP: `React.Component` is an Object.
 FP: `setState({})` Method is an example for FP.
 
-#### TIP: Dont try to [learn](https://www.youtube.com/watch?v=m3svKOdZijA) OOP and FP from Underscore.js
+> TIP: Dont try to [learn](https://www.youtube.com/watch?v=m3svKOdZijA) OOP and FP from Underscore.js

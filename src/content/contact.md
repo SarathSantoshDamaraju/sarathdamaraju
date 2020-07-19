@@ -1,5 +1,6 @@
 ---
-title: About
+title: 🙌 About
+heading: About
 intro: "hi there \U0001F590️, i'm"
 name: Krishna Sarath
 tag: >-
