@@ -1,4 +1,8 @@
 ---
+title: 👨‍💻 Products
+heading: Products
+description: Proudly made
+utmParams: ['portfolio']
 products:
   - link: 'http://bit.ly/2T6nbdD'
     thumbnail: caligator.png
