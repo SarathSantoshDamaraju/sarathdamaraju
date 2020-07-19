@@ -32,7 +32,7 @@ h6,
 .h5,
 .h6 {
   line-height: $line-height-base;
-  font-family: 'raleway-medium'
+  font-family: 'raleway-medium';
 }
 
 h1,
@@ -75,12 +75,13 @@ p {
   font-size: $font-size-small;
 }
 
+a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
 a,
 a:hover,
 a:visited {
-  color: $primary;
-}
-
-a:hover {
-  text-decoration: underline
+  color: $dark;
 }

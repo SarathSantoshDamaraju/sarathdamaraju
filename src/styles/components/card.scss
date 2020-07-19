@@ -3,7 +3,7 @@
   max-width: 270px;
   margin: $spacing-base * 3;
   text-align: left;
-  background-color: $primary;
+  background-color: $light;
   border-radius: $spacing-base;
   padding: $spacing-base;
   transition: ease 0.15s;
@@ -17,7 +17,7 @@
     height: auto;
     overflow: hidden;
     position: relative;
-    padding: 20px 40px 0px
+    padding: 20px 40px 0px;
   }
 
   &__image {
@@ -28,22 +28,22 @@
   }
 
   &__info {
-    padding: 20px 20px 0px;
+    padding: 20px 20px 0;
     height: 124px;
-    background: #fff;
+    background: $dark;
     border-radius: 4px;
   }
 
   &__description {
     font-size: 12px;
     line-height: 20px;
-    color: #000;
+    color: $light;
   }
 
   &__title {
     font-size: 16px;
     font-weight: bold;
-    color: $primary;
+    color: $light;
   }
 
   iframe {
@@ -53,3 +53,20 @@
   }
 }
 
+.light {
+  .card {
+    background-color: $dark;
+
+    &__info {
+      background: $light;
+    }
+
+    &__description {
+      color: $dark;
+    }
+
+    &__title {
+      color: $dark;
+    }
+  }
+}
